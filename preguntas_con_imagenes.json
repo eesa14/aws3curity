@@ -15,9 +15,9 @@
         "imagenes": []
     },
     {
-        "pregunta": "2.- Un ingeniero de seguridad está configurando un nuevo sitio web llamado example.com. El ingeniero desea asegurar las comunicaciones con el sitio web exigiendo que los usuarios se conecten a example.com mediante HTTPS. ¿Cuál de las siguientes es una opción válida para almacenar certificados SSL/TLS?",
+        "pregunta": "2.- Un ingeniero de seguridad está configurando un nuevo sitio web llamado example.com. El ingeniero desea asegurar las comunicaciones con el sitio web exigiendo que los usuarios se conecten a example.com mediante HTTPS. ¿Cuál de las siguientes es una opción válida para almacenar certificados SSL/TLS?.",
         "opciones": [
-            "A.- Certificado SSL personalizado almacenado en AWS Key Management Service (AWS KMS)",
+            "A.- Certificado SSL personalizado almacenado en AWS Key Management Service (AWS KMS).",
             "B-. Certificado SSL predeterminado almacenado en Amazon CloudFront",
             "C. Certificado SSL personalizado almacenado en AWS Certificate Manager (ACM)",
             "D. Certificado SSL predeterminado almacenado en Amazon S3"
