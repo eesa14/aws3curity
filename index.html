@@ -26,21 +26,22 @@
         }
 
         .pregunta {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background: #f1f1f1;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            font-weight: bold;
+            margin-bottom: 30px;
+            padding: 25px 30px;
+            border: 2px solid #ddd;
+            background: #f0f0f0; /* color más oscuro para destacar */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            font-size: 20px;
+            line-height: 1.6;
             text-align: justify;
-            font-size: 18px;
-            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+            color: #333;
+            transition: all 0.3s ease;
         }
 
         .pregunta:hover {
-            transform: translateY(-3px); /* ✅ Hace que el recuadro "flote" */
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
         .opciones {
@@ -66,7 +67,7 @@
         }
 
         .opcion:hover {
-            transform: translateY(-3px); /* ✅ Efecto flotante en respuestas */
+            transform: translateY(-3px);
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
         }
 
