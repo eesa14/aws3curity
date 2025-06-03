@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let preguntas = [];
     let paginaActual = 0;
-    const preguntasPorPagina = 25;
+    const preguntasPorPagina = 103;
 
     async function cargarPreguntas() {
         try {
