@@ -26,24 +26,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 ${pregunta.pregunta.replace(/\n/g, "<br>")}
             </div>`;
 
-            if (pregunta.imagenes && pregunta.imagenes.length > 0) {
-                pregunta.imagenes.forEach(img => {
-                    preguntaHTML += `<img src="${img.url}" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 10px; display: block;">`;
-                });
-            }
+            
+if (pregunta.imagenes && pregunta.imagenes.length > 0) {
+    pregunta.imagenes.forEach(img => {
+        preguntaHTML += `<img src="${img.url}" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 10px; display: block;">`;
+    });
+}
 
             preguntaHTML += `<div class="opciones">`;
 
-            pregunta.opciones.forEach((opcion, opcionIndex) => {
-                let inputId = `pregunta${inicio + index}_opcion${opcionIndex}`;
-                let esUltimaRespuesta = (opcionIndex === pregunta.opciones.length - 1) ? "ultima-respuesta" : ""; // ✅ Se agrega clase para la última respuesta
+pregunta.opciones.forEach((opcion, opcionIndex) => {
+    let inputId = `pregunta${inicio + index}_opcion${opcionIndex}`;
+    let esUltimaRespuesta = (opcionIndex === pregunta.opciones.length - 1) ? "ultima-respuesta" : "";
 
-                preguntaHTML += `
-                    <label for="${inputId}" class="opcion ${esUltimaRespuesta}" onclick="verificarRespuesta(this, '${opcion}', ${inicio + index})">
-                        <input type="${pregunta.respuestas_correctas.length > 1 ? 'checkbox' : 'radio'}" id="${inputId}" name="respuesta${inicio + index}" value="${opcion}" style="margin-right: 10px;">
-                        <span style="flex: 1;">${opcion}</span>
-                    </label>`;
-            });
+    preguntaHTML += `
+        <label for="${inputId}" class="opcion ${esUltimaRespuesta}" onclick="verificarRespuesta(this, '${opcion}', ${inicio + index})">
+            <input type="${pregunta.respuestas_correctas.length > 1 ? 'checkbox' : 'radio'}" id="${inputId}" name="respuesta${inicio + index}" value="${opcion}" style="margin-right: 10px;">
+            <span style="flex: 1;">${opcion}</span>
+        </label>`;
+
+    // Imagenes para preguntas específicas:
+    const preguntasConImagenes = [34, 57, 59, 69, 98, 100, 104, 108, 114, 170, 171, 258];
+
+    if (preguntasConImagenes.includes(inicio + index + 1) && pregunta.imagenes_respuesta) {
+        const letra = opcion.trim().charAt(0);
+        const imagenObj = pregunta.imagenes_respuesta.find(img => img.opcion === letra);
+        if (imagenObj) {
+            preguntaHTML += `<div style="margin-top:5px;">
+                                <img src="${imagenObj.url}" style="max-width:100%; border-radius:8px;">
+                             </div>`;
+        }
+    }
+});
 
             preguntaHTML += `</div>`;
             contenedor.innerHTML += preguntaHTML;
