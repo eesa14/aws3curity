@@ -419,7 +419,7 @@
     {
         "pregunta": "30.- Una empresa está alojando una aplicación web en instancias Amazon EC2 que están detrás de un Application Load Balancer (ALB). La aplicación se ha convertido en el objetivo de un ataque de denegación de servicio (DoS). Los registros de la aplicación muestran que las solicitudes provienen de un pequeño número de direcciones IP de cliente, pero estas direcciones cambian con frecuencia. La empresa necesita bloquear el tráfico malicioso con una solución que requiera el menor esfuerzo continuo posible. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Crear una regla basada en tasa (rate-based rule) en AWS WAF y adjuntarla al ALB.",
+            "A. Crear una regla basada en tasa en AWS WAF y adjuntarla al ALB.",
             "B. Actualizar el grupo de seguridad adjunto al ALB para bloquear las direcciones IP atacantes.",
             "C. Actualizar la lista de control de acceso a red (NACL) de la subred del ALB para bloquear las direcciones IP atacantes.",
             "D. Crear una regla basada en tasa en AWS WAF y adjuntarla al grupo de seguridad de las instancias EC2."
