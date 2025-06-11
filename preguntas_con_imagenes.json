@@ -308,7 +308,7 @@
     {
         "pregunta": "22.- Un ingeniero de seguridad crea una política de bucket de Amazon S3 que deniega el acceso a todos los usuarios. Unos días después, el ingeniero agrega una nueva instrucción a la política del bucket para permitir acceso de solo lectura a otro empleado. Sin embargo, después de actualizar la política, el empleado sigue recibiendo un mensaje de acceso denegado. ¿Cuál es la causa más probable de este rechazo de acceso?",
         "opciones": [
-            "A. Es necesario actualizar la ACL (lista de control de acceso) del bucket.",
+            "A. Es necesario actualizar la ACL del bucket.",
             "B. La política de IAM no permite al usuario acceder al bucket.",
             "C. Las políticas de bucket tardan unos minutos en aplicarse.",
             "D. El permiso de permitir está siendo anulado por un denegar."
