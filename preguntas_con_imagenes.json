@@ -206,8 +206,8 @@
         "pregunta": "15.-Una empresa está diseñando una estructura multi-cuenta para sus equipos de desarrollo. Está utilizando AWS Organizations y AWS IAM Identity Center (AWS Single Sign-On). La empresa debe implementar una solución que cumpla con los siguientes requisitos Los equipos de desarrollo solo puedan usar regiones específicas de AWS. Cada cuenta de AWS permita el acceso solo a servicios específicos. ¿Qué solución cumplirá con estos requisitos con el menor esfuerzo operativo posible?",
         "opciones": [
             "A. Usar IAM Identity Center para configurar roles vinculados a servicios (service-linked roles) con políticas IAM que incluyan los elementos Condition, Resource y NotAction para permitir el acceso solo a las regiones y servicios necesarios.",
-            "B. Desactivar AWS STS (Security Token Service) en las regiones que los desarrolladores no tienen permitido usar.",
-            "C. Crear Políticas de Control de Servicios (SCPs) que incluyan los elementos Condition, Resource y NotAction para permitir el acceso solo a las regiones y servicios requeridos.",
+            "B. Desactivar AWS STS en las regiones que los desarrolladores no tienen permitido usar.",
+            "C. Crear SCPs que incluyan los elementos Condition, Resource y NotAction para permitir el acceso solo a las regiones y servicios requeridos.",
             "D. Para cada cuenta de AWS, crear políticas personalizadas basadas en identidad para IAM Identity Center, usando sentencias que incluyan los elementos Condition, Resource y NotAction para permitir acceso únicamente a las regiones y servicios necesarios."
         ],
         "respuestas_correctas": [
@@ -311,7 +311,7 @@
             "A. Es necesario actualizar la ACL (lista de control de acceso) del bucket.",
             "B. La política de IAM no permite al usuario acceder al bucket.",
             "C. Las políticas de bucket tardan unos minutos en aplicarse.",
-            "D. El permiso de allow (permitir) está siendo anulado por un deny (denegar)."
+            "D. El permiso de permitir está siendo anulado por un denegar."
         ],
         "respuestas_correctas": [
             "D"
@@ -407,8 +407,8 @@
         "pregunta": "29.- Un equipo está utilizando AWS Secrets Manager para almacenar la contraseña de la base de datos de una aplicación. Solo un número limitado de entidades de IAM dentro de la cuenta puede acceder al secreto. Los usuarios que requieren acceso cambian con frecuencia. Un ingeniero de seguridad debe crear una solución que maximice la flexibilidad y escalabilidad. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
             "A. Usar un enfoque basado en roles, creando un rol de IAM con una política de permisos inline que permita acceso al secreto. Actualizar la política de confianza del rol para agregar o quitar los usuarios según sea necesario.",
-            "B. Implementar un punto de enlace (endpoint) de VPC para Secrets Manager. Crear y adjuntar una política de endpoint que especifique qué entidades IAM pueden acceder al secreto. Actualizar la lista de usuarios IAM según se requiera.",
-            "C. Usar un enfoque basado en etiquetas, adjuntando una política de recurso al secreto. Aplicar etiquetas (tags) tanto al secreto como a los usuarios IAM. Usar las claves de condición aws:PrincipalTag y aws:ResourceTag para controlar el acceso.",
+            "B. Implementar un punto de enlace de VPC para Secrets Manager. Crear y adjuntar una política de endpoint que especifique qué entidades IAM pueden acceder al secreto. Actualizar la lista de usuarios IAM según se requiera.",
+            "C. Usar un enfoque basado en etiquetas, adjuntando una política de recurso al secreto. Aplicar etiquetas tanto al secreto como a los usuarios IAM. Usar las claves de condición aws:PrincipalTag y aws:ResourceTag para controlar el acceso.",
             "D. Usar un enfoque de denegación por defecto, utilizando políticas de IAM para denegar explícitamente el acceso al secreto. Adjuntar estas políticas a un grupo de IAM. Agregar a todos los usuarios IAM a ese grupo. Quitar temporalmente a los usuarios del grupo cuando necesiten acceso y volver a agregarlos cuando ya no se les deba permitir."
         ],
         "respuestas_correctas": [
@@ -460,7 +460,7 @@
         "opciones": [
             "A. Habilitar AWS Security Hub en la cuenta de AWS.",
             "B. Habilitar Amazon GuardDuty en la cuenta de AWS.",
-            "C. Crear un tema (topic) de Amazon Simple Notification Service (Amazon SNS). Suscribir la lista de distribución de correos electrónicos del equipo de seguridad a ese tema.",
+            "C. Crear un tema de Amazon Simple Notification Service (Amazon SNS). Suscribir la lista de distribución de correos electrónicos del equipo de seguridad a ese tema.",
             "D. Crear una cola de Amazon Simple Queue Service (Amazon SQS). Suscribir la lista de distribución del equipo de seguridad a la cola.",
             "E. Crear una regla de Amazon EventBridge para hallazgos de alta severidad de GuardDuty. Configurar la regla para que publique un mensaje en el tema SNS.",
             "F. Crear una regla de Amazon EventBridge para hallazgos de alta severidad de Security Hub. Configurar la regla para que publique un mensaje en la cola."
@@ -538,8 +538,8 @@
     {
         "pregunta": "38.- Un ingeniero de seguridad de una empresa ha recibido la tarea de restringir el acceso de la cuenta IAM de un contratista a solo la consola de Amazon EC2, sin permitirle acceso a ningún otro servicio de AWS. La cuenta IAM del contratista no debe poder obtener acceso a ningún otro servicio de AWS, incluso si se le asignan permisos adicionales por pertenecer a un grupo de IAM. ¿Qué debe hacer el ingeniero de seguridad para cumplir con estos requisitos?",
         "opciones": [
-            "A. Crear una política IAM inline (incrustada) para el usuario IAM del contratista que permita el acceso a Amazon EC2.",
-            "B. Crear una política de límite de permisos (permissions boundary) que permita acceso a Amazon EC2. Asociar la cuenta IAM del contratista con esta política de límite de permisos.",
+            "A. Crear una política IAM inline para el usuario IAM del contratista que permita el acceso a Amazon EC2.",
+            "B. Crear una política de límite de permisos que permita acceso a Amazon EC2. Asociar la cuenta IAM del contratista con esta política de límite de permisos.",
             "C. Crear un grupo IAM con una política adjunta que permita el acceso a Amazon EC2. Asociar la cuenta IAM del contratista a ese grupo.",
             "D. Crear un rol IAM que permita acceso a EC2 y deniegue explícitamente todos los demás servicios. Indicar al contratista que siempre debe asumir ese rol."
         ],
@@ -554,7 +554,7 @@
             "A. Crear un nuevo trail y configurarlo para que envíe los registros de CloudTrail a Amazon S3. Usar Amazon EventBridge para enviar una notificación si se elimina o detiene un trail.",
             "B. Implementar una función de AWS Lambda en cada cuenta para verificar si existe un trail, y crear uno nuevo si es necesario.",
             "C. Editar el trail existente en la cuenta de administración de Organizations y aplicarlo a toda la organización.",
-            "D. Crear una SCP (política de control de servicio) para denegar las acciones cloudtrail:Delete* y cloudtrail:Stop*. Aplicar la SCP a todas las cuentas."
+            "D. Crear una SCPs para denegar las acciones cloudtrail:Delete* y cloudtrail:Stop*. Aplicar la SCP a todas las cuentas."
         ],
         "respuestas_correctas": [
             "C"
@@ -579,7 +579,7 @@
         "opciones": [
             "A. Crear la política administrada por el cliente en cada cuenta donde se va a asignar el conjunto de permisos. Asegurarse de que la política tenga el mismo nombre y los mismos permisos en cada cuenta.",
             "B. Eliminar la política administrada por AWS o la política administrada por el cliente del conjunto de permisos. Crear un segundo conjunto de permisos que contenga la política eliminada. Aplicar ambos conjuntos de permisos por separado al usuario.",
-            "C. Evaluar la lógica de ambas políticas (la administrada por AWS y la administrada por el cliente) y resolver cualquier conflicto dentro del conjunto de permisos antes de implementarlo.",
+            "C. Evaluar la lógica de la política administrada por AWS y la políticas administrada por el cliente y resolver cualquier conflicto dentro del conjunto de permisos antes de implementarlo.",
             "D. No agregar el nuevo conjunto de permisos al usuario. En su lugar, editar el conjunto de permisos existente del usuario para incluir tanto la política administrada por AWS como la del cliente."
         ],
         "respuestas_correctas": [
@@ -616,10 +616,10 @@
     {
         "pregunta": "44.- Una empresa utiliza Amazon RDS para MySQL como motor de base de datos para sus aplicaciones. Una auditoría de seguridad reciente reveló una instancia de RDS que no cumple con la política de la empresa respecto al cifrado de datos en reposo. Un ingeniero de seguridad de la empresa necesita asegurarse de que todas las bases de datos RDS existentes estén cifradas usando cifrado del lado del servidor y que cualquier desviación futura de esta política sea detectada. ¿Qué combinación de pasos debería seguir el ingeniero de seguridad para lograr esto? (Elige dos.)",
         "opciones": [
-            "A. Crear una regla de AWS Config para detectar la creación de bases de datos RDS sin cifrado. Crear una regla de Amazon EventBridge que se active ante cambios en el estado de cumplimiento de las reglas de AWS Config y usar Amazon SNS (Simple Notification Service) para notificar al equipo de operaciones de seguridad.",
+            "A. Crear una regla de AWS Config para detectar la creación de bases de datos RDS sin cifrado. Crear una regla de Amazon EventBridge que se active ante cambios en el estado de cumplimiento de las reglas de AWS Config y usar Amazon SNS para notificar al equipo de operaciones de seguridad.",
             "B. Usar AWS Systems Manager State Manager para detectar desviaciones en la configuración de cifrado de las bases de datos RDS. Crear una regla de Amazon EventBridge para rastrear los cambios de estado y usar Amazon SNS para notificar al equipo de operaciones de seguridad.",
-            "C. Crear una réplica de lectura (read replica) de la base de datos RDS no cifrada y habilitar el cifrado durante el proceso. Una vez que la réplica esté activa, promoverla como una instancia independiente y eliminar la instancia de base de datos no cifrada.",
-            "D. Tomar una instantánea (snapshot) de la base de datos RDS no cifrada. Copiar la instantánea y habilitar el cifrado durante el proceso. Restaurar la instancia de base de datos a partir de la nueva instantánea cifrada. Terminar la instancia no cifrada.",
+            "C. Crear una réplica de lectura de la base de datos RDS no cifrada y habilitar el cifrado durante el proceso. Una vez que la réplica esté activa, promoverla como una instancia independiente y eliminar la instancia de base de datos no cifrada.",
+            "D. Tomar una instantánea  de la base de datos RDS no cifrada. Copiar la instantánea y habilitar el cifrado durante el proceso. Restaurar la instancia de base de datos a partir de la nueva instantánea cifrada. Terminar la instancia no cifrada.",
             "E. Habilitar el cifrado para la instancia RDS identificada como no cifrada cambiando su configuración existente."
         ],
         "respuestas_correctas": [
@@ -646,7 +646,7 @@
         "opciones": [
             "A. Agregar una regla de entrada al grupo de seguridad para permitir tráfico desde 0.0.0.0/0 para todos los puertos. Agregar una regla de salida para permitir tráfico hacia 0.0.0.0/0 para todos los puertos. Luego, eliminar inmediatamente estas reglas.",
             "B. Eliminar la regla del puerto 22 del grupo de seguridad. Asignar un rol a la instancia que permita conexiones usando AWS Systems Manager Session Manager, de modo que el equipo forense pueda acceder a la instancia.",
-            "C. Crear una ACL de red (network ACL) asociada a la subred de la instancia. Agregar una regla al principio del conjunto de reglas de entrada para denegar todo el tráfico desde 0.0.0.0/0. Agregar otra regla al principio del conjunto de reglas de salida para denegar todo el tráfico hacia 0.0.0.0/0.",
+            "C. Crear una ACL de red asociada a la subred de la instancia. Agregar una regla al principio del conjunto de reglas de entrada para denegar todo el tráfico desde 0.0.0.0/0. Agregar otra regla al principio del conjunto de reglas de salida para denegar todo el tráfico hacia 0.0.0.0/0.",
             "D. Crear un documento de AWS Systems Manager que agregue una regla de firewall a nivel de host para bloquear todo el tráfico de entrada y salida. Ejecutar el documento en la instancia objetivo."
         ],
         "respuestas_correctas": [
@@ -670,7 +670,7 @@
     {
         "pregunta": "48.- El Application Load Balancer (ALB) público de una empresa recientemente sufrió un ataque DDoS. Para mitigar este problema, la empresa implementó Amazon CloudFront delante del ALB, de manera que los usuarios no accedan directamente a las instancias de Amazon EC2 que están detrás del ALB. La empresa descubre que aún hay tráfico que llega directamente al ALB y está siendo procesado por las instancias EC2. ¿Qué combinación de pasos debe seguir la empresa para asegurarse de que las instancias EC2 solo reciban tráfico proveniente de CloudFront? (Elige dos opciones).",
         "opciones": [
-            "A. Configurar CloudFront para agregar una política de clave de caché (cache key policy) que permita un encabezado HTTP personalizado que CloudFront envíe al ALB.",
+            "A. Configurar CloudFront para agregar una política de clave de caché que permita un encabezado HTTP personalizado que CloudFront envíe al ALB.",
             "B. Configurar CloudFront para agregar un encabezado HTTP personalizado a las solicitudes que envía al ALB.",
             "C. Configurar el ALB para que solo reenvíe solicitudes que contengan el encabezado HTTP personalizado.",
             "D. Configurar el ALB y CloudFront para que usen el encabezado X-Forwarded-For para verificar las direcciones IP de los clientes.",
