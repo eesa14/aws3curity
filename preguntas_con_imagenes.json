@@ -728,9 +728,9 @@
     {
         "pregunta": "52.- Una empresa tiene varios petabytes de datos. Debe conservar esta información durante 7 años para cumplir con requisitos regulatorios. El equipo de cumplimiento le solicita a un oficial de seguridad que desarrolle una estrategia que impida que cualquier persona modifique o elimine los datos. ¿Qué solución cumplirá con este requisito de la forma MÁS rentable?",
         "opciones": [
-            "A. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de cumplimiento (compliance mode). Subir los datos al bucket. Crear una política basada en recursos (bucket policy) que cumpla con todos los requisitos regulatorios.",
-            "B. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de gobernanza (governance mode). Subir los datos al bucket. Crear una política basada en el usuario (IAM) que cumpla con todos los requisitos regulatorios.",
-            "C. Crear un vault (bóveda) en Amazon S3 Glacier. Crear una política de Vault Lock en Glacier que cumpla con todos los requisitos regulatorios. Subir los datos a la bóveda.",
+            "A. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de cumplimiento. Subir los datos al bucket. Crear una política basada en recursos (bucket policy) que cumpla con todos los requisitos regulatorios.",
+            "B. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de gobernanza. Subir los datos al bucket. Crear una política basada en el usuario (IAM) que cumpla con todos los requisitos regulatorios.",
+            "C. Crear un vault en Amazon S3 Glacier. Crear una política de Vault Lock en Glacier que cumpla con todos los requisitos regulatorios. Subir los datos a la bóveda.",
             "D. Crear un bucket de Amazon S3. Subir los datos al bucket. Usar una regla de ciclo de vida para mover los datos a una bóveda en S3 Glacier. Crear una política de Vault Lock que cumpla con todos los requisitos regulatorios."
         ],
         "respuestas_correctas": [
@@ -769,8 +769,8 @@
         "opciones": [
             "A. Actualizar la política del endpoint de gateway de S3 para permitir las acciones de S3 solo si los valores de las claves de condición aws:ResourceOrgID y aws:PrincipalOrgID coinciden con los de la empresa.",
             "B. Actualizar la política del rol de perfil de instancia para permitir las acciones de S3 solo si el valor de la clave de condición aws:ResourceOrgID coincide con el de la empresa.",
-            "C. Agregar una regla en la ACL de red (network ACL) de la subred de las instancias EC2 para bloquear las conexiones salientes por el puerto 443.",
-            "D. Aplicar una política SCP (Service Control Policy) en la cuenta de AWS para permitir las acciones de S3 solo si los valores de las claves de condición aws:ResourceOrgID y aws:PrincipalOrgID coinciden con los de la empresa."
+            "C. Agregar una regla en la ACL de red de la subred de las instancias EC2 para bloquear las conexiones salientes por el puerto 443.",
+            "D. Aplicar una política SCP en la cuenta de AWS para permitir las acciones de S3 solo si los valores de las claves de condición aws:ResourceOrgID y aws:PrincipalOrgID coinciden con los de la empresa."
         ],
         "respuestas_correctas": [
             "A"
@@ -817,7 +817,7 @@
         "opciones": [
             "A. Configurar los permisos en los archivos individuales del bucket de S3 para que solo la distribución de CloudFront tenga acceso a ellos.",
             "B. Crear un control de acceso de origen (OAC). Asociar el OAC con la distribución de CloudFront. Configurar los permisos del bucket de S3 para que solo el OAC pueda acceder a los archivos en el bucket S3.",
-            "C. Crear un rol de S3 en AWS Identity and Access Management (IAM). Permitir que solo la distribución de CloudFront asuma el rol para acceder a los archivos en el bucket de S3.",
+            "C. Crear un rol de S3 en AWS Identity and Access Management . Permitir que solo la distribución de CloudFront asuma el rol para acceder a los archivos en el bucket de S3.",
             "D. Crear una política de bucket de S3 que use solo el ID de la distribución de CloudFront como principal y el ARN como destino."
         ],
         "respuestas_correctas": [
@@ -847,7 +847,7 @@
         "pregunta": "60.- Una empresa ha establecido una nueva alianza con un proveedor. Este proveedor procesará datos de los clientes de la empresa. La empresa subirá archivos de datos como objetos en un bucket de Amazon S3. El proveedor descargará esos objetos para realizar el procesamiento de datos. Los objetos contendrán información sensible. Un ingeniero de seguridad debe implementar una solución que evite que los objetos permanezcan en el bucket de S3 por más de 72 horas. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
             "A. Usar Amazon Macie para escanear el bucket de S3 en busca de datos sensibles cada 72 horas. Configurar Macie para eliminar los objetos que contengan datos sensibles cuando se descubran.",
-            "B. Configurar una regla de ciclo de vida (Lifecycle) en el bucket de S3 para que expire (elimine) los objetos que hayan estado en el bucket durante más de 72 horas.",
+            "B. Configurar una regla de ciclo de vida en el bucket de S3 para que expire los objetos que hayan estado en el bucket durante más de 72 horas.",
             "C. Crear una regla programada de Amazon EventBridge que invoque una función de AWS Lambda todos los días. Programar la función Lambda para eliminar cualquier objeto que haya estado en el bucket de S3 por más de 72 horas.",
             "D. Usar la clase de almacenamiento S3 Intelligent-Tiering para todos los objetos que se suban al bucket. Utilizar Intelligent-Tiering para que expire los objetos que hayan estado en el bucket por más de 72 horas."
         ],
