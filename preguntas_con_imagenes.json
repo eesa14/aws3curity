@@ -2111,7 +2111,7 @@
     {
         "pregunta": "149.- Una empresa necesita una solución para proteger datos críticos y evitar que se eliminen de forma permanente. Los datos están almacenados en buckets de Amazon S3. La empresa debe replicar los objetos de S3 desde la Región principal de AWS hacia una Región secundaria, para cumplir con los requisitos de recuperación ante desastres. Además, debe garantizar que los usuarios con acceso de administrador no puedan eliminar permanentemente los datos en la Región secundaria. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Configurar AWS Backup para realizar copias de seguridad de S3 entre regiones. Seleccionar una bóveda de respaldo (backup vault) en la Región secundaria. Habilitar AWS Backup Vault Lock en modo de gobernanza para los respaldos en la Región secundaria.",
+            "A. Configurar AWS Backup para realizar copias de seguridad de S3 entre regiones. Seleccionar una bóveda de respaldo en la Región secundaria. Habilitar AWS Backup Vault Lock en modo de gobernanza para los respaldos en la Región secundaria.",
             "B. Implementar S3 Object Lock en modo de cumplimiento en la Región principal. Configurar la replicación de S3 para replicar los objetos a un bucket de S3 en la Región secundaria.",
             "C. Configurar la replicación de S3 para replicar los objetos a un bucket de S3 en la Región secundaria. Crear una política de bucket S3 que deniegue la acción s3:ReplicateDelete en el bucket de la Región secundaria.",
             "D. Configurar la replicación de S3 para replicar los objetos a un bucket de S3 en la Región secundaria. Configurar el versionado de objetos S3 en el bucket de la Región secundaria."
@@ -2126,7 +2126,7 @@
         "opciones": [
             "A. Crear un disparador de tipo pre sign-up con AWS Lambda. Asociar esta función Lambda con el grupo de usuarios de Amazon Cognito.",
             "B. Usar una regla de coincidencia geográfica para configurar una ACL web de AWS WAF. Asociar esta ACL con el grupo de usuarios de Amazon Cognito.",
-            "C. Configurar un cliente de aplicación (app client) para el grupo de usuarios de Amazon Cognito de la aplicación. Usar el ID del cliente para validar las solicitudes en la interfaz hospedada (Hosted UI).",
+            "C. Configurar un cliente de aplicación para el grupo de usuarios de Amazon Cognito de la aplicación. Usar el ID del cliente para validar las solicitudes en la interfaz hospedada.",
             "D. Actualizar el grupo de usuarios de Amazon Cognito de la aplicación para configurar una restricción geográfica.",
             "E. Usar Amazon Cognito para configurar un proveedor de identidad social (IdP) para validar las solicitudes en la interfaz hospedada."
         ],
@@ -2171,7 +2171,7 @@
     {
         "pregunta": "153.- Una empresa quiere implementar seguridad a nivel de host para instancias de Amazon EC2 y contenedores almacenados en Amazon Elastic Container Registry (Amazon ECR). Ya han desplegado el agente de AWS Systems Manager (SSM Agent) en las instancias EC2. Todas las cuentas de la empresa están organizadas dentro de una organización en AWS Organizations. La empresa necesita analizar las cargas de trabajo para detectar vulnerabilidades de software y exposiciones no intencionadas a la red. Los hallazgos deben enviarse a AWS Security Hub, que ya está configurado a nivel organizacional. Además, la solución debe desplegarse automáticamente en todas las cuentas miembro, incluidas las nuevas cuentas. Cuando se activen nuevas cargas de trabajo, estas deben ser escaneadas automáticamente. ¿Cuál solución cumple con estos requisitos?",
         "opciones": [
-            "A. Usar SCPs (Service Control Policies) para configurar el escaneo de instancias EC2 y contenedores en ECR para todas las cuentas de la organización.",
+            "A. Usar SCPs para configurar el escaneo de instancias EC2 y contenedores en ECR para todas las cuentas de la organización.",
             "B. Configurar un administrador delegado para Amazon GuardDuty en la organización. Crear una regla de Amazon EventBridge para iniciar el análisis de contenedores en ECR.",
             "C. Configurar un administrador delegado para Amazon Inspector en la organización. Configurar el escaneo automático para nuevas cuentas miembro.",
             "D. Configurar un administrador delegado para Amazon Inspector en la organización. Crear una regla de AWS Config para iniciar el análisis de contenedores en ECR."
@@ -2225,7 +2225,7 @@
         "opciones": [
             "A. Habilitar AWS Identity and Access Management Access Analyzer para la organización. Configurar la organización como una zona de confianza. Filtrar los hallazgos por ID de cuenta de AWS.",
             "B. Crear una regla personalizada de AWS Config para monitorear los roles de IAM en cada cuenta. Implementar un agregador de AWS Config en una cuenta central. Filtrar los hallazgos por ID de cuenta de AWS.",
-            "C. Activar Amazon Inspector. Integrarlo con AWS Security Hub. Filtrar los hallazgos por ID de cuenta de AWS para los tipos de recursos \"rol de IAM\" y \"política de bucket de S3\".",
+            "C. Activar Amazon Inspector. Integrarlo con AWS Security Hub. Filtrar los hallazgos por ID de cuenta de AWS para los tipos de recursos rol de IAM y política de bucket de S3.",
             "D. Configurar la organización para usar Amazon GuardDuty. Filtrar los hallazgos por ID de cuenta de AWS para el tipo de hallazgo Discovery:IAMUser/AnomalousBehavior."
         ],
         "respuestas_correctas": [
@@ -2236,7 +2236,7 @@
     {
         "pregunta": "158.- Una empresa tiene varias cuentas de AWS organizadas mediante AWS Organizations. La empresa necesita instalar un paquete de software corporativo en todas las instancias de Amazon EC2 de todas las cuentas de la organización. Una cuenta central proporciona las AMIs base para las instancias EC2. La empresa usa AWS Systems Manager para el inventario de software y las operaciones de parchado. Un ingeniero de seguridad debe implementar una solución que detecte automáticamente las instancias EC2 que no tengan el software requerido, y que también instale el software automáticamente si no está presente. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Proporcionar nuevas AMIs con el software requerido ya preinstalado. Aplicar una etiqueta (tag) a las AMIs para indicar que contienen el software. Configurar una SCP que permita lanzar nuevas instancias EC2 solo si usan AMIs con dicha etiqueta. Etiquetar todas las instancias EC2 existentes.",
+            "A. Proporcionar nuevas AMIs con el software requerido ya preinstalado. Aplicar una etiqueta a las AMIs para indicar que contienen el software. Configurar una SCP que permita lanzar nuevas instancias EC2 solo si usan AMIs con dicha etiqueta. Etiquetar todas las instancias EC2 existentes.",
             "B. Configurar una línea base de parches personalizada en Systems Manager Patch Manager. Agregar el nombre del paquete del software requerido a la lista de paquetes aprobados. Asociar esta línea base de parches a todas las instancias EC2. Configurar una ventana de mantenimiento para la instalación del software.",
             "C. Habilitar AWS Config de forma centralizada. Configurar la regla administrada ec2-managedinstance-applications-required de AWS Config en todas las cuentas. Crear una regla de Amazon EventBridge que reaccione a los eventos de AWS Config. Configurar esta regla para invocar una función Lambda que use Systems Manager Run Command para instalar el software requerido.",
             "D. Crear un nuevo paquete en Systems Manager Distributor con el software requerido, especificando la ubicación de descarga. Seleccionar todas las instancias EC2 de las distintas cuentas. Instalar el software usando Systems Manager Run Command."
@@ -2265,9 +2265,9 @@
         "pregunta": "160.- Una empresa necesita crear una solución centralizada para analizar archivos de registros (logs). La empresa utiliza una organización en AWS Organizations para administrar sus cuentas de AWS. La solución debe agregar y normalizar eventos desde las siguientes fuentes: Toda la organización en AWS Organizations Todas las ofertas de AWS Marketplace que se ejecutan en las cuentas de AWS de la empresa Los sistemas on-premises (locales) de la empresa ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
             "A. Configurar un bucket centralizado de Amazon S3 para los logs. Habilitar VPC Flow Logs, AWS CloudTrail y logs de Amazon Route 53 en todas las cuentas. Configurar todas las cuentas para que usen el bucket centralizado. Configurar AWS Glue crawlers para analizar los archivos de logs. Usar Amazon Athena para consultar los datos de los logs.",
-            "B. Configurar flujos de logs (log streams) en Amazon CloudWatch Logs para las fuentes que necesitan monitoreo. Crear filtros de suscripción de logs para cada flujo. Reenviar los mensajes a Amazon OpenSearch Service para análisis.",
+            "B. Configurar flujos de logs en Amazon CloudWatch Logs para las fuentes que necesitan monitoreo. Crear filtros de suscripción de logs para cada flujo. Reenviar los mensajes a Amazon OpenSearch Service para análisis.",
             "C. Configurar una cuenta administradora delegada para Amazon Security Lake dentro de la organización en AWS Organizations. Habilitar y configurar Security Lake para toda la organización. Agregar las cuentas que deben ser monitoreadas. Usar Amazon Athena para consultar los datos de logs.",
-            "D. Aplicar una SCP (Service Control Policy) para configurar que todas las cuentas miembro y servicios entreguen los archivos de logs a un bucket centralizado de Amazon S3. Usar Amazon OpenSearch Service para consultar ese bucket en busca de entradas de logs."
+            "D. Aplicar una SCP para configurar que todas las cuentas miembro y servicios entreguen los archivos de logs a un bucket centralizado de Amazon S3. Usar Amazon OpenSearch Service para consultar ese bucket en busca de entradas de logs."
         ],
         "respuestas_correctas": [
             "C"
@@ -2279,7 +2279,7 @@
         "opciones": [
             "A. En cada cuenta, crear un conjunto de usuarios IAM dedicados. Asegurarse de que todos los usuarios asuman estos usuarios IAM mediante federación con el IdP existente.",
             "B. Implementar un rol IAM en una cuenta de identidad central. Permitir que los usuarios asuman ese rol mediante federación con el IdP existente. En cada cuenta, implementar un conjunto de roles IAM que coincidan con los patrones de acceso deseados. Incluir una política de confianza que permita el acceso desde la cuenta de identidad central. Editar la política de permisos del rol en cada cuenta según los requerimientos de acceso de los usuarios.",
-            "C. Habilitar AWS IAM Identity Center (anteriormente AWS SSO). Integrarlo con el IdP corporativo existente. Crear conjuntos de permisos que se ajusten a los patrones de acceso deseados. Asignar permisos de acuerdo con los requerimientos de acceso de los usuarios.",
+            "C. Habilitar AWS IAM Identity Center. Integrarlo con el IdP corporativo existente. Crear conjuntos de permisos que se ajusten a los patrones de acceso deseados. Asignar permisos de acuerdo con los requerimientos de acceso de los usuarios.",
             "D. En cada cuenta, implementar un conjunto de roles IAM que coincidan con los patrones de acceso deseados. Crear una política de confianza con el IdP existente. Actualizar la política de permisos de cada rol para que use condiciones IAM basadas en SAML, según los requerimientos de acceso del usuario."
         ],
         "respuestas_correctas": [
@@ -2332,7 +2332,7 @@
             "A. Crear una nueva SCP en la cuenta del equipo de marketing. Configurar la SCP para permitir explícitamente el uso compartido de recursos.",
             "B. Editar la SCP existente para agregar una declaración Condition que excluya la cuenta del equipo de marketing.",
             "C. Editar la SCP existente para incluir una instrucción Allow que especifique la cuenta del equipo de marketing.",
-            "D. Crear una política de límites de permisos (permissions boundary) de IAM para permitir explícitamente el uso compartido de recursos. Adjuntar la política a los usuarios de IAM en la cuenta del equipo de marketing."
+            "D. Crear una política de límites de permisos de IAM para permitir explícitamente el uso compartido de recursos. Adjuntar la política a los usuarios de IAM en la cuenta del equipo de marketing."
         ],
         "respuestas_correctas": [
             "B"
@@ -2372,8 +2372,8 @@
     {
         "pregunta": "168.- Una empresa opera un sitio web global de comercio electrónico que está alojado en AWS. La empresa utiliza Amazon CloudFront para distribuir contenido a sus usuarios. Ahora, la empresa quiere bloquear el tráfico entrante de un conjunto específico de países para cumplir con nuevas regulaciones de datos. ¿Qué solución cumplirá con estos requisitos de la forma más rentable?",
         "opciones": [
-            "A. Crear una ACL web de AWS WAF con una condición de coincidencia de IP (IP match) para denegar los rangos de IP de esos países. Asociar la ACL web con la distribución de CloudFront.",
-            "B. Crear una ACL web de AWS WAF con una condición de coincidencia geográfica (geo match) para denegar los países específicos. Asociar la ACL web con la distribución de CloudFront.",
+            "A. Crear una ACL web de AWS WAF con una condición de coincidencia de IP para denegar los rangos de IP de esos países. Asociar la ACL web con la distribución de CloudFront.",
+            "B. Crear una ACL web de AWS WAF con una condición de coincidencia geográfica para denegar los países específicos. Asociar la ACL web con la distribución de CloudFront.",
             "C. Usar la función de restricción geográfica de CloudFront para denegar los países específicos.",
             "D. Usar los encabezados de geolocalización de CloudFront para denegar los países específicos."
         ],
@@ -2504,7 +2504,7 @@
         "opciones": [
             "A. En AWS CloudTrail, crear un trail para eventos de administración. Ejecutar el script con las políticas administradas existentes. Usar IAM Access Analyzer para generar una nueva política IAM basada en la actividad registrada en el trail. Reemplazar las políticas administradas por la nueva política generada.",
             "B. Eliminar las políticas administradas existentes del rol. Adjuntar el generador de políticas de IAM Access Analyzer al rol. Ejecutar el script. Ir a Access Analyzer y generar una política IAM de mínimos privilegios. Adjuntar la nueva política al rol.",
-            "C. Crear un analizador de cuenta en IAM Access Analyzer. Crear una regla de archivo (archive rule) con un filtro que revise si PrincipalArn coincide con el ARN del rol. Ejecutar el script. Eliminar las políticas administradas existentes del rol.",
+            "C. Crear un analizador de cuenta en IAM Access Analyzer. Crear una regla de archivo con un filtro que revise si PrincipalArn coincide con el ARN del rol. Ejecutar el script. Eliminar las políticas administradas existentes del rol.",
             "D. En AWS CloudTrail, crear un trail para eventos de administración. Eliminar las políticas administradas existentes del rol. Ejecutar el script. Buscar los errores de autorización en los eventos del trail asociados al script. Crear una política IAM nueva que incluya la acción y recurso que causó el fallo. Repetir el proceso hasta que el script funcione. Adjuntar la nueva política al rol."
         ],
         "respuestas_correctas": [
@@ -2515,8 +2515,8 @@
     {
         "pregunta": "178.- Un ingeniero de seguridad está diseñando una arquitectura en la nube para dar soporte a una aplicación. La aplicación se ejecuta en instancias de Amazon EC2 y procesa información sensible, incluidos números de tarjetas de crédito. La aplicación enviará los números de tarjetas de crédito a un componente que se ejecuta en un entorno aislado. Este componente cifrará, almacenará y descifrará los números, y luego emitirá tokens para reemplazar los números en otras partes de la aplicación. El componente que gestiona el proceso de tokenización se implementará en un conjunto separado de instancias EC2. Los demás componentes de la aplicación no deben poder almacenar ni acceder a los números de tarjetas de crédito. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Usar instancias dedicadas de EC2 (Dedicated Instances) para el componente de tokenización de la aplicación.",
-            "B. Colocar las instancias EC2 que gestionan el proceso de tokenización en un grupo de ubicación de particiones (partition placement group).",
+            "A. Usar instancias dedicadas de EC2 para el componente de tokenización de la aplicación.",
+            "B. Colocar las instancias EC2 que gestionan el proceso de tokenización en un grupo de ubicación de particiones.",
             "C. Crear una VPC separada e implementar nuevas instancias EC2 en esa VPC para manejar la tokenización de datos.",
             "D. Implementar el código de tokenización en AWS Nitro Enclaves alojados en instancias EC2."
         ],
