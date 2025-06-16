@@ -3916,7 +3916,7 @@
 	    "D. Crear una política personalizada de IAM que otorgue permisos de Get*, List*, Batch* y Describe* en el recurso arn:aws:securityhub:us-west-2::product/aws/inspector/*. Adjuntar la política al rol de ejecución de la función Lambda."
         ],
         "respuestas_correctas": [
-            "A"
+            "B"
         ],
         "imagenes": []
     },
@@ -3924,9 +3924,9 @@
         "pregunta": "282.- Una empresa debe conservar copias de respaldo de sus instancias Amazon RDS y de los volúmenes de Amazon Elastic Block Store (Amazon EBS). Las copias de respaldo deben almacenarse en centros de datos situados a cientos de millas de distancia. ¿Qué solución cumplirá estos requisitos con el menor esfuerzo operativo?",
         "opciones": [
             "A. Configurar AWS Backup para crear las copias de respaldo según el programa necesario. En el plan de respaldo, especificar múltiples zonas de disponibilidad como destinos de respaldo.",
-            "B. Configurar Amazon Data Lifecycle Manager (DLM) para crear las copias de respaldo. Configurar la política de DLM para copiar los respaldos a un bucket de Amazon S3 y habilitar la replicación en dicho bucket.",
+            "B. Configurar Amazon Data Lifecycle Manager para crear las copias de respaldo. Configurar la política de DLM para copiar los respaldos a un bucket de Amazon S3 y habilitar la replicación en dicho bucket.",
             "C. Configurar AWS Backup para crear las copias de respaldo según el programa necesario. Crear una bóveda de respaldo de destino en otra región de AWS. Configurar AWS Backup para copiar los respaldos a esa bóveda de destino.",
-            "D. Configurar Amazon Data Lifecycle Manager (DLM) para crear las copias de respaldo. Crear una función de AWS Lambda que copie los respaldos a otra región de AWS. Usar Amazon EventBridge para invocar la función Lambda de forma programada."
+            "D. Configurar Amazon Data Lifecycle Manager para crear las copias de respaldo. Crear una función de AWS Lambda que copie los respaldos a otra región de AWS. Usar Amazon EventBridge para invocar la función Lambda de forma programada."
         ],
         "respuestas_correctas": [
             "C"
@@ -3937,7 +3937,7 @@
         "pregunta": "283.- Un ingeniero de seguridad ha detectado una cantidad inusualmente alta de tráfico proveniente de una sola dirección IP al analizar los registros de acceso del Application Load Balancer. ¿Cómo puede el ingeniero limitar la cantidad de solicitudes desde esa IP sin bloquearla por completo?",
         "opciones": [
             "A. Agregar una regla en el Application Load Balancer para enrutar el tráfico que provenga de la dirección IP en cuestión y mostrar una página web estática.",
-            "B. Implementar una regla basada en tasa (rate-based rule) con AWS WAF.",
+            "B. Implementar una regla basada en tasa con AWS WAF.",
             "C. Utilizar AWS Shield para limitar la tasa de solicitudes originadas.",
             "D. Implementar la función de geolocalización en Amazon Route 53"
         ],
@@ -4053,7 +4053,7 @@
     {
         "pregunta": "292.- Una empresa tiene cientos de cuentas de AWS y utiliza AWS Organizations. La empresa planea crear muchos roles y políticas de IAM diferentes para su equipo de producto, equipo de seguridad y equipo de plataforma. Algunas políticas de IAM se compartirán entre equipos. Un ingeniero de seguridad necesita implementar una solución para agrupar lógicamente los roles de IAM de cada equipo. La solución debe permitir solo al equipo de plataforma delegar permisos de IAM a los servicios de AWS. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Configurar una ruta de IAM (IAM path) con los roles de cada equipo. Implementar una SCP que niegue el permiso iam:PassRole a todas las entidades, excepto a las que pertenecen a la ruta del equipo de plataforma.",
+            "A. Configurar una ruta de IAM con los roles de cada equipo. Implementar una SCP que niegue el permiso iam:PassRole a todas las entidades, excepto a las que pertenecen a la ruta del equipo de plataforma.",
             "B. Aplicar etiquetas diferentes a los roles de IAM de cada equipo. Implementar una SCP que niegue el permiso sts:AssumeRole a todas las entidades, excepto a los roles del equipo de plataforma.",
             "C. Aplicar etiquetas diferentes a las políticas de IAM de cada equipo. Implementar una SCP que niegue el permiso iam:PassRole a todas las entidades, excepto a las políticas del equipo de plataforma.",
             "D. Configurar una ruta de IAM con los roles de cada equipo. Usar permissions boundaries de IAM para denegar el permiso sts:AssumeRole a los roles de los equipos de producto y de seguridad."
@@ -4066,9 +4066,9 @@
     {
         "pregunta": "293.- Los desarrolladores de una empresa están utilizando URLs de funciones de AWS Lambda para invocar funciones directamente. La empresa debe asegurarse de que los desarrolladores no puedan configurar ni desplegar funciones sin autenticación en las cuentas de producción. La empresa quiere cumplir este requisito usando AWS Organizations, sin requerir trabajo adicional por parte de los desarrolladores. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Requerir que los desarrolladores configuren todas las URLs de funciones para admitir CORS (compartición de recursos entre orígenes) cuando las funciones se llamen desde un dominio diferente.",
-            "B. Usar una cuenta delegada de administrador de AWS WAF para ver y bloquear el acceso no autenticado a las URLs de funciones en cuentas de producción, basándose en la unidad organizativa (OU) de las cuentas que utilizan las funciones.",
-            "C. Usar políticas de control de servicio (SCP) para permitir todas las acciones lambda:CreateFunctionUrlConfig y lambda:UpdateFunctionUrlConfig que tengan como valor de la clave de condición lambda:FunctionUrlAuthType el valor AWS_IAM.",
+            "A. Requerir que los desarrolladores configuren todas las URLs de funciones para admitir CORS cuando las funciones se llamen desde un dominio diferente.",
+            "B. Usar una cuenta delegada de administrador de AWS WAF para ver y bloquear el acceso no autenticado a las URLs de funciones en cuentas de producción, basándose en la unidad organizativa de las cuentas que utilizan las funciones.",
+            "C. Usar SCP para permitir todas las acciones lambda:CreateFunctionUrlConfig y lambda:UpdateFunctionUrlConfig que tengan como valor de la clave de condición lambda:FunctionUrlAuthType el valor AWS_IAM.",
             "D. Usar SCPs para denegar todas las acciones lambda:CreateFunctionUrlConfig y lambda:UpdateFunctionUrlConfig que tengan como valor de la clave de condición lambda:FunctionUrlAuthType el valor NONE."
         ],
         "respuestas_correctas": [
@@ -4132,7 +4132,7 @@
         "pregunta": "298.- Un ingeniero de seguridad ha creado un detector de Amazon GuardDuty en varias cuentas de AWS. Las cuentas pertenecen a una organización en AWS Organizations. El ingeniero de seguridad necesita una visibilidad centralizada de los hallazgos de seguridad provenientes de los detectores. ¿Qué solución cumplirá con este requisito?",
         "opciones": [
             "A. Configurar Amazon CloudWatch Logs Insights.",
-            "B. Crear un panel de control (dashboard) en Amazon CloudWatch.",
+            "B. Crear un panel de control en Amazon CloudWatch.",
             "C. Configurar integraciones con AWS Security Hub.",
             "D. Consultar los hallazgos usando Amazon Athena."
         ],
@@ -4144,8 +4144,8 @@
     {
         "pregunta": "299.- Una empresa ejecuta cargas de trabajo en instancias Amazon EC2 dentro de VPCs. Las instancias EC2 realizan solicitudes a buckets de Amazon S3 a través de endpoints de VPC. La empresa utiliza AWS Organizations para gestionar sus cuentas de AWS. La empresa necesita que las solicitudes realizadas por las instancias EC2 se originen desde la misma VPC para la cual se emitieron las credenciales de la instancia EC2. ¿Qué solución cumplirá con este requisito?",
         "opciones": [
-            "A. Implementar una SCP que incluya la acción S3:* con la condición \"aws:SourceVpc\": \"${aws:Ec2InstanceSourceVpc}\".",
-            "B. Editar los endpoints de VPC para incluir la acción S3:* con la condición \"aws:Ec2InstanceSourcePrivateIPv4\": \"${aws:VpcSourceIp}\".",
+            "A. Implementar una SCP que incluya la acción S3:* con la condición *aws:SourceVpc*: ${aws:Ec2InstanceSourceVpc}.",
+            "B. Editar los endpoints de VPC para incluir la acción S3:* con la condición aws:Ec2InstanceSourcePrivateIPv4: ${aws:VpcSourceIp}.",
             "C. Restringir todas las acciones en las políticas del bucket S3 utilizando la clave de condición aws:SourceVpce con el valor del endpoint de VPC permitido.",
             "D. Restringir todas las acciones en las políticas del bucket S3 utilizando la clave de condición aws:SourceVpc con el valor del ID de VPC permitido."
         ],
@@ -4224,10 +4224,10 @@
     {
         "pregunta": "305.- Una empresa tiene una aplicación que necesita leer objetos desde un bucket de Amazon S3. La empresa configura una política de IAM y la adjunta a un rol de IAM que la aplicación utiliza. Sin embargo, cuando la aplicación intenta leer objetos del bucket S3, recibe errores de AccessDenied. Un ingeniero de seguridad debe resolver este problema sin reducir la seguridad del bucket S3 ni de la aplicación. ¿Cuál solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Adjuntar una política de recursos (resource policy) al bucket S3 para otorgar acceso de lectura al rol.",
+            "A. Adjuntar una política de recursos al bucket S3 para otorgar acceso de lectura al rol.",
             "B. Implementar una nueva versión de la aplicación en otra región de AWS y adjuntar el rol a la aplicación.",
             "C. Revisar la política de IAM utilizando AWS IAM Access Analyzer para asegurarse de que otorga los permisos adecuados. Validar que la aplicación esté asumiendo correctamente el rol.",
-            "D. Asegurarse de que la función \"Block Public Access\" esté desactivada en el bucket S3. Revisar los registros de AWS CloudTrail para validar que la aplicación esté asumiendo correctamente el rol."
+            "D. Asegurarse de que la función Block Public Access esté desactivada en el bucket S3. Revisar los registros de AWS CloudTrail para validar que la aplicación esté asumiendo correctamente el rol."
         ],
         "respuestas_correctas": [
             "C"
@@ -4237,10 +4237,10 @@
     {
         "pregunta": "306.- Un ingeniero de seguridad está diseñando una solución que proporcione cifrado de extremo a extremo entre los clientes y los contenedores Docker que se ejecutan en Amazon Elastic Container Service (Amazon ECS). Esta solución también debe ser capaz de manejar patrones de tráfico volátiles. ¿Cuál solución ofrecería la mayor escalabilidad y la menor latencia?",
         "opciones": [
-            "A. Configurar un Network Load Balancer (NLB) para terminar el tráfico TLS y luego volver a cifrar el tráfico hacia los contenedores.",
-            "B. Configurar un Application Load Balancer (ALB) para terminar el tráfico TLS y luego volver a cifrar el tráfico hacia los contenedores.",
+            "A. Configurar un Network Load Balancer para terminar el tráfico TLS y luego volver a cifrar el tráfico hacia los contenedores.",
+            "B. Configurar un Application Load Balancer para terminar el tráfico TLS y luego volver a cifrar el tráfico hacia los contenedores.",
             "C. Configurar un Network Load Balancer con un listener TCP para pasar directamente el tráfico TLS hacia los contenedores.",
-            "D. Configurar Amazon Route 53 con enrutamiento de respuesta multivalor (multivalue answer routing) para enviar el tráfico directamente a los contenedores."
+            "D. Configurar Amazon Route 53 con enrutamiento de respuesta multivalor para enviar el tráfico directamente a los contenedores."
         ],
         "respuestas_correctas": [
             "C"
