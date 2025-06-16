@@ -3832,7 +3832,7 @@
     {
         "pregunta": "275.- Una empresa ejecuta cargas de trabajo en AWS. Estas cargas están distribuidas en cuentas separadas de AWS para desarrollo, pruebas y producción. Todos los desarrolladores de la empresa pueden acceder a la cuenta de desarrollo. Un subconjunto de esos desarrolladores también puede acceder a las cuentas de pruebas y producción. La empresa está gastando demasiado tiempo administrando credenciales individuales para cada desarrollador en cada entorno. Un ingeniero de seguridad debe implementar una solución más escalable, que permita a los desarrolladores acceder a recursos en múltiples cuentas, y que además minimice el uso compartido de credenciales. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Usar AWS Identity and Access Management (IAM) Access Analyzer para identificar los permisos que los desarrolladores necesitan en cada cuenta. Configurar IAM Access Analyzer para aprovisionar automáticamente el acceso correcto para cada desarrollador.",
+            "A. Usar AWS Identity and Access Management Access Analyzer para identificar los permisos que los desarrolladores necesitan en cada cuenta. Configurar IAM Access Analyzer para aprovisionar automáticamente el acceso correcto para cada desarrollador.",
             "B. Crear un flujo de trabajo en Amazon Simple Workflow Service (Amazon SWF). Indicar a los desarrolladores que usen ese flujo para solicitar acceso a otras cuentas cuando necesiten permisos adicionales.",
             "C. Crear roles de IAM en las cuentas de pruebas y producción. Agregar una política que permita la acción sts:AssumeRole a esos roles. Crear roles de IAM en la cuenta de desarrollo para los desarrolladores que deben acceder a pruebas y producción. Agregar estos roles a la política de confianza de los nuevos roles en pruebas y producción.",
             "D. Crear cuentas de servicio en los entornos de pruebas y producción. Entregar las claves de acceso de esas cuentas a los desarrolladores que necesiten acceso. Rotar las claves periódicamente."
@@ -3910,7 +3910,10 @@
     {
         "pregunta": "281.- Una empresa desea automatizar la creación de un informe de seguridad. La empresa tiene una función de AWS Lambda que recopila datos de hallazgos de Amazon Inspector almacenados en AWS Security Hub en la región us-west-2. Luego, la función Lambda debe generar un informe diario utilizando una programación con Amazon EventBridge. Un ingeniero de seguridad descubre que la función Lambda no está logrando crear el informe. El ingeniero debe implementar una solución que corrija el problema y que además utilice permisos con el menor privilegio necesario. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Crear una política basada en recursos que permita a Security Hub acceder al ARN de la función Lambda.\nB. Adjuntar la política administrada AWSSecurityHubReadOnlyAccess al rol de ejecución de la función Lambda.\nC. Otorgar al rol de ejecución de la función Lambda permisos de solo lectura para acceder a Amazon Inspector y Security Hub.\nD. Crear una política personalizada de IAM que otorgue permisos de Get*, List*, Batch* y Describe* en el recurso arn:aws:securityhub:us-west-2::product/aws/inspector/*. Adjuntar la política al rol de ejecución de la función Lambda."
+            "A. Crear una política basada en recursos que permita a Security Hub acceder al ARN de la función Lambda.",
+	    "B. Adjuntar la política administrada AWSSecurityHubReadOnlyAccess al rol de ejecución de la función Lambda.",
+	    "C. Otorgar al rol de ejecución de la función Lambda permisos de solo lectura para acceder a Amazon Inspector y Security Hub.",
+	    "D. Crear una política personalizada de IAM que otorgue permisos de Get*, List*, Batch* y Describe* en el recurso arn:aws:securityhub:us-west-2::product/aws/inspector/*. Adjuntar la política al rol de ejecución de la función Lambda."
         ],
         "respuestas_correctas": [
             "A"
