@@ -3741,8 +3741,8 @@
         "opciones": [
             "A. Configurar S3 Block Public Access para todos los buckets de S3.",
             "B. Configurar S3 Block Public Access para todas las cuentas de AWS.",
-            "C. Implementar una SCP que incluya la condición \aws:ResourceOrgPaths\: \${aws:PrincipalOrgPaths}\.",
-            "D. Implementar una SCP que incluya la condición \aws:ResourceOrgID\: \${aws:PrincipalOrgID}\."
+            "C. Implementar una SCP que incluya la condición aws:ResourceOrgPaths: ${aws:PrincipalOrgPaths}.",
+            "D. Implementar una SCP que incluya la condición aws:ResourceOrgID: ${aws:PrincipalOrgID}."
         ],
         "respuestas_correctas": [
             "D"
