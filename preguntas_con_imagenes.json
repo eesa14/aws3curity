@@ -660,7 +660,7 @@
             "A. Crear una nueva pista de CloudTrail. Seleccionar las nuevas regiones donde la empresa añadió recursos.",
             "B. Cambiar el bucket de S3 para que reciba notificaciones que rastreen todas las acciones desde todas las regiones.",
             "C. Crear una nueva pista de CloudTrail que se aplique a todas las regiones.",
-            "D. Modificar la pista de CloudTrail existente para que se aplique a todas las regiones."
+            "D. Cambie la ruta de CloudTrail existente para que se aplique a todas las regiones."
         ],
         "respuestas_correctas": [
             "D"
@@ -728,7 +728,7 @@
     {
         "pregunta": "52.- Una empresa tiene varios petabytes de datos. Debe conservar esta información durante 7 años para cumplir con requisitos regulatorios. El equipo de cumplimiento le solicita a un oficial de seguridad que desarrolle una estrategia que impida que cualquier persona modifique o elimine los datos. ¿Qué solución cumplirá con este requisito de la forma MÁS rentable?",
         "opciones": [
-            "A. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de cumplimiento. Subir los datos al bucket. Crear una política basada en recursos (bucket policy) que cumpla con todos los requisitos regulatorios.",
+            "A. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de cumplimiento. Subir los datos al bucket. Crear una política basada en recursos que cumpla con todos los requisitos regulatorios.",
             "B. Crear un bucket de Amazon S3. Configurar el bucket para usar S3 Object Lock en modo de gobernanza. Subir los datos al bucket. Crear una política basada en el usuario (IAM) que cumpla con todos los requisitos regulatorios.",
             "C. Crear un vault en Amazon S3 Glacier. Crear una política de Vault Lock en Glacier que cumpla con todos los requisitos regulatorios. Subir los datos a la bóveda.",
             "D. Crear un bucket de Amazon S3. Subir los datos al bucket. Usar una regla de ciclo de vida para mover los datos a una bóveda en S3 Glacier. Crear una política de Vault Lock que cumpla con todos los requisitos regulatorios."
@@ -741,7 +741,7 @@
     {
         "pregunta": "53.- Una empresa utiliza un proveedor de identidad externo y SSO basado en SAML para acceder a sus cuentas de AWS. Después de que el proveedor de identidad externo renovó un certificado de firma que había expirado, los usuarios vieron el siguiente mensaje al intentar iniciar sesión: Error: Response Signature Invalid (Service: AWSSecurityTokenService; Status Code: 400; Error Code: InvalidIdentityToken) Un ingeniero de seguridad necesita proporcionar una solución que corrija el error y que minimice la carga operativa. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Subir la nueva clave privada del certificado de firma del proveedor externo a la entidad del proveedor de identidad definida en AWS Identity and Access Management (IAM) usando la consola de administración de AWS.",
+            "A. Subir la nueva clave privada del certificado de firma del proveedor externo a la entidad del proveedor de identidad definida en AWS Identity and Access Management IAM usando la consola de administración de AWS.",
             "B. Firmar el archivo de metadatos del proveedor de identidad con la nueva clave pública. Subir la firma a la entidad del proveedor de identidad definida en IAM usando la AWS CLI.",
             "C. Descargar el archivo actualizado de metadatos SAML del proveedor de identidad. Actualizar el archivo en la entidad del proveedor de identidad definida en IAM usando la AWS CLI.",
             "D. Configurar la entidad del proveedor de identidad definida en IAM para que recupere de forma síncrona la nueva clave pública mediante la consola de administración de AWS."
@@ -781,7 +781,7 @@
         "pregunta": "56.- Una empresa que opera en un entorno de nube híbrida debe cumplir con requisitos estrictos de cumplimiento normativo. La empresa quiere crear un informe que incluya evidencia de cargas de trabajo locales (on-premises) junto con evidencia de recursos en AWS. Un ingeniero de seguridad debe implementar una solución para recopilar, revisar y gestionar dicha evidencia, con el fin de demostrar el cumplimiento de las políticas de la empresa. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
             "A. Crear una evaluación en AWS Audit Manager usando un marco predefinido o personalizado. Subir evidencia manual desde las cargas de trabajo locales. Agregar esa evidencia a la evaluación. Generar un informe de evaluación después de que Audit Manager recopile automáticamente la evidencia de los recursos en AWS.",
-            "B. Instalar el agente de Amazon CloudWatch en las cargas de trabajo locales. Usar AWS Config para implementar un conjunto de cumplimiento (conformance pack) a partir de una plantilla de ejemplo o una plantilla YAML personalizada. Generar un informe de evaluación después de que AWS Config identifique los recursos y cargas de trabajo que no cumplen con las políticas.",
+            "B. Instalar el agente de Amazon CloudWatch en las cargas de trabajo locales. Usar AWS Config para implementar un conjunto de cumplimiento a partir de una plantilla de ejemplo o una plantilla YAML personalizada. Generar un informe de evaluación después de que AWS Config identifique los recursos y cargas de trabajo que no cumplen con las políticas.",
             "C. Configurar el estándar de seguridad apropiado en AWS Security Hub. Subir evidencia manual desde las cargas de trabajo locales. Esperar a que Security Hub recopile la evidencia de los recursos en AWS. Descargar la lista de controles como un archivo .csv.",
             "D. Instalar el agente de Amazon CloudWatch en las cargas de trabajo locales. Crear un panel de CloudWatch para monitorear tanto los recursos locales como los de AWS. Ejecutar una consulta sobre las cargas de trabajo y recursos. Descargar los resultados."
         ],
@@ -817,7 +817,7 @@
         "opciones": [
             "A. Configurar los permisos en los archivos individuales del bucket de S3 para que solo la distribución de CloudFront tenga acceso a ellos.",
             "B. Crear un control de acceso de origen (OAC). Asociar el OAC con la distribución de CloudFront. Configurar los permisos del bucket de S3 para que solo el OAC pueda acceder a los archivos en el bucket S3.",
-            "C. Crear un rol de S3 en AWS Identity and Access Management . Permitir que solo la distribución de CloudFront asuma el rol para acceder a los archivos en el bucket de S3.",
+            "C. Crear un rol de S3 en AWS Identity and Access Management (IAM). Permitir que solo la distribución de CloudFront asuma el rol para acceder a los archivos en el bucket de S3.",
             "D. Crear una política de bucket de S3 que use solo el ID de la distribución de CloudFront como principal y el ARN como destino."
         ],
         "respuestas_correctas": [
@@ -859,7 +859,7 @@
     {
         "pregunta": "61.- Una empresa eliminó accidentalmente la clave privada de una instancia de Amazon EC2 respaldada por Amazon Elastic Block Store (Amazon EBS). Un ingeniero de seguridad necesita recuperar el acceso a la instancia. ¿Qué combinación de pasos permitirá cumplir con este objetivo? (Elige dos opciones)",
         "opciones": [
-            "A. Detener la instancia. Desasociar (detach) el volumen raíz. Generar un nuevo par de claves.",
+            "A. Detener la instancia. Desconectar el volumen raíz. Generar un nuevo par de claves.",
             "B. Mantener la instancia en ejecución. Desasociar el volumen raíz. Generar un nuevo par de claves.",
             "C. Una vez que el volumen esté desasociado de la instancia original, adjuntar el volumen a otra instancia como volumen de datos. Modificar el archivo authorized_keys con una nueva clave pública. Volver a asociar el volumen a la instancia original. Iniciar la instancia.",
             "D. Una vez que el volumen esté desasociado de la instancia original, adjuntar el volumen a otra instancia como volumen de datos. Modificar el archivo authorized_keys con una nueva clave privada. Volver a asociar el volumen a la instancia original. Iniciar la instancia.",
@@ -915,7 +915,7 @@
         "opciones": [
             "A. Usar VPC Traffic Mirroring. Configurar todas las interfaces de red elásticas relevantes como fuente del tráfico, incluir amazon-dns en el filtro de mirroring, y establecer Amazon CloudWatch Logs como destino del tráfico duplicado. Usar CloudWatch Insights para ejecutar consultas sobre las sesiones de mirroring respecto a la IP de origen y el nombre DNS.",
             "B. Configurar VPC Flow Logs en todas las VPC relevantes. Enviar los registros a un bucket de Amazon S3. Usar Amazon Athena para ejecutar consultas SQL sobre la dirección IP de origen y el nombre DNS.",
-            "C. Configurar el registro de consultas (query logging) de Route 53 Resolver en todas las VPC relevantes. Enviar los registros a Amazon CloudWatch Logs. Usar CloudWatch Insights para ejecutar consultas sobre la dirección IP de origen y el nombre DNS.",
+            "C. Configurar el registro de consultas de Route 53 Resolver en todas las VPC relevantes. Enviar los registros a Amazon CloudWatch Logs. Usar CloudWatch Insights para ejecutar consultas sobre la dirección IP de origen y el nombre DNS.",
             "D. Modificar las reglas de Route 53 Resolver en los dominios autorizados que se reenvían a los servidores DNS on-premises. Enviar los registros a un bucket de Amazon S3. Usar Amazon Athena para ejecutar consultas SQL sobre la dirección IP de origen y el nombre DNS."
         ],
         "respuestas_correctas": [
@@ -927,10 +927,10 @@
         "pregunta": "66.- Un ingeniero de seguridad está configurando un control de acceso basado en atributos (ABAC) para permitir que solo ciertos principales puedan subir objetos a un bucket de Amazon S3. Estos principales ya tienen acceso a Amazon S3. El ingeniero necesita configurar una política del bucket que permita subir objetos solo si el valor de la etiqueta (tag) Team del objeto coincide con el valor de la etiqueta Team asociada al principal. Durante las pruebas, el ingeniero nota que un principal aún puede subir objetos al bucket de S3 incluso cuando los valores de las etiquetas no coinciden. ¿Qué combinación de factores está permitiendo que la operación PutObject tenga éxito a pesar de que los valores de las etiquetas son distintos? (Elige dos opciones)",
         "opciones": [
             "A. La política basada en la identidad del principal concede acceso para subir objetos al bucket de S3 sin condiciones.",
-            "B. La política basada en la identidad del principal anula la condición porque contiene una autorización explícita (explicit allow).",
+            "B. La política basada en la identidad del principal anula la condición porque contiene una autorización explícita.",
             "C. La política del recurso bucket de S3 no deniega el acceso para subir objetos.",
             "D. La política del bucket de S3 no puede permitir acciones al principal.",
-            "E. La política del bucket no aplica a principales dentro de la misma zona de confianza (zone of trust)."
+            "E. La política del bucket no aplica a principales dentro de la misma zona de confianza."
         ],
         "respuestas_correctas": [
             "C",
@@ -941,10 +941,10 @@
     {
         "pregunta": "67.- Una empresa aloja múltiples aplicaciones dentro de una sola VPC en su cuenta de AWS. Las aplicaciones se ejecutan detrás de un Application Load Balancer que está asociado a una ACL web de AWS WAF. El equipo de seguridad de la empresa ha identificado que se están realizando múltiples escaneos de puertos provenientes de un rango específico de direcciones IP en internet. Un ingeniero de seguridad necesita bloquear el acceso desde esas direcciones IP sospechosas. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Modificar la ACL web de AWS WAF con una regla de coincidencia de conjunto de IP (IP set match) para denegar las solicitudes entrantes desde ese rango de direcciones IP.",
+            "A. Modificar la ACL web de AWS WAF con una regla de coincidencia de conjunto de IP para denegar las solicitudes entrantes desde ese rango de direcciones IP.",
             "B. Agregar una regla en todos los grupos de seguridad para denegar las solicitudes entrantes desde ese rango de direcciones IP.",
-            "C. Modificar la ACL web de AWS WAF con una regla basada en tasa (rate-based rule) para denegar las solicitudes entrantes desde ese rango de direcciones IP.",
-            "D. Configurar la ACL web de AWS WAF con condiciones de coincidencia por expresiones regulares (regex match conditions). Especificar un conjunto de patrones para denegar las solicitudes entrantes basándose en la condición de coincidencia."
+            "C. Modificar la ACL web de AWS WAF con una regla basada en tasa para denegar las solicitudes entrantes desde ese rango de direcciones IP.",
+            "D. Configurar la ACL web de AWS WAF con condiciones de coincidencia por expresiones regulares. Especificar un conjunto de patrones para denegar las solicitudes entrantes basándose en la condición de coincidencia."
         ],
         "respuestas_correctas": [
             "A"
@@ -956,7 +956,7 @@
         "opciones": [
             "A. El ID externo que usa el auditor está ausente o es incorrecto.",
             "B. El auditor está usando una contraseña incorrecta.",
-            "C. Al auditor no se le ha otorgado el permiso sts:AssumeRole para el rol en la cuenta de destino.",
+            "C. No se le ha otorgado el permiso sts:AssumeRole para el rol en la cuenta de destino.",
             "D. El rol de Amazon EC2 que utiliza el auditor debe estar configurado como el rol de la cuenta de destino.",
             "E. La clave secreta (secret key) que usa el auditor está ausente o es incorrecta.",
             "F. El ARN del rol que usa el auditor está ausente o es incorrecto."
@@ -989,8 +989,8 @@
     {
         "pregunta": "70.- Una empresa tiene un grupo de instancias Amazon EC2 en una única subred privada de una VPC que no tiene una gateway de internet asociada. Un ingeniero de seguridad ha instalado el agente de Amazon CloudWatch en todas las instancias de esa subred para capturar los registros de una aplicación específica. Para garantizar que los registros se transmitan de forma segura, el equipo de redes de la empresa ha creado endpoints de VPC para el monitoreo de CloudWatch y los logs de CloudWatch, y los ha adjuntado a la VPC. La aplicación está generando registros, pero cuando el ingeniero de seguridad consulta en CloudWatch, los registros no aparecen. ¿Qué combinación de pasos debe seguir el ingeniero de seguridad para solucionar este problema? (Elige tres opciones).",
         "opciones": [
-            "A. Asegurarse de que el perfil de instancia EC2 (instance profile) adjunto a las instancias tenga permisos para crear flujos de registros (log streams) y escribir logs.",
-            "B. Crear un filtro de métricas (metric filter) sobre los logs para que puedan visualizarse en la Consola de administración de AWS.",
+            "A. Asegurarse de que el perfil de instancia EC2 adjunto a las instancias tenga permisos para crear flujos de registros y escribir logs.",
+            "B. Crear un filtro de métricas sobre los logs para que puedan visualizarse en la Consola de administración de AWS.",
             "C. Verificar el archivo de configuración del agente de CloudWatch en cada instancia EC2 para asegurarse de que esté recopilando los archivos de log correctos.",
             "D. Verificar las políticas de los endpoints de VPC para asegurarse de que las instancias EC2 tengan permisos para usarlos.",
             "E. Crear una gateway NAT en la subred para que las instancias EC2 puedan comunicarse con CloudWatch.",
@@ -1035,7 +1035,7 @@
             "A. Modificar el patrón de eventos de EventBridge seleccionando Amazon S3. Seleccionar Todos los eventos como tipo de evento.",
             "B. Modificar el patrón de eventos de EventBridge seleccionando Amazon S3. Seleccionar Operaciones a nivel de bucket como tipo de evento.",
             "C. Habilitar CloudTrail Insights para identificar actividad inusual de la API.",
-            "D. Habilitar CloudTrail para monitorear eventos de datos (data events) tanto de lectura como de escritura en los buckets de S3."
+            "D. Habilitar CloudTrail para monitorear eventos de datos tanto de lectura como de escritura en los buckets de S3."
         ],
         "respuestas_correctas": [
             "D"
@@ -1061,7 +1061,7 @@
             "A. Usar una plantilla de CloudFormation en las cuentas miembro para lanzar cargas de trabajo. Configurar la plantilla para usar la función Fn::ImportValue y obtener así los valores de los IDs de las subredes.",
             "B. Usar un Transit Gateway en la VPC dentro de Account-A. Configurar las cuentas miembro para que utilicen el transit gateway y accedan a las subredes de Account-A para lanzar cargas de trabajo.",
             "C. Usar AWS Resource Access Manager (AWS RAM) para compartir las subredes de la VPC de Account-A con las demás cuentas miembro. Configurar las cuentas miembro para que utilicen las subredes compartidas al lanzar cargas de trabajo.",
-            "D. Crear una conexión de emparejamiento (peering) entre Account-A y las demás cuentas miembro. Configurar las cuentas miembro para que utilicen las subredes de Account-A a través de la conexión de peering para lanzar cargas de trabajo."
+            "D. Crear una conexión de emparejamiento entre Account-A y las demás cuentas miembro. Configurar las cuentas miembro para que utilicen las subredes de Account-A a través de la conexión de peering para lanzar cargas de trabajo."
         ],
         "respuestas_correctas": [
             "C"
@@ -1086,7 +1086,7 @@
         "opciones": [
             "A. Analizar un informe de uso de AWS Identity and Access Management (IAM) desde AWS Trusted Advisor para ver cuándo se usó por última vez la clave de acceso.",
             "B. Analizar los logs de Amazon CloudWatch para buscar actividad relacionada con la clave de acceso.",
-            "C. Analizar los logs de flujo de VPC (VPC Flow Logs) buscando actividad relacionada con la clave de acceso.",
+            "C. Analizar los logs de flujo de VPC buscando actividad relacionada con la clave de acceso.",
             "D. Analizar un informe de credenciales en AWS Identity and Access Management (IAM) para ver cuándo se usó por última vez la clave de acceso."
         ],
         "respuestas_correctas": [
@@ -1099,7 +1099,7 @@
         "opciones": [
             "A. Crear una política de IAM que prohíba cambios en el trail específico de CloudTrail y aplicar esa política al usuario raíz de la cuenta de AWS.",
             "B. Crear una política de bucket de S3 en la cuenta de destino especificada para el trail de CloudTrail que prohíba los cambios de configuración por parte del usuario raíz de la cuenta de origen.",
-            "C. Crear una SCP (política de control de servicios) que prohíba los cambios en el trail específico de CloudTrail y aplicar la SCP a la unidad organizativa o cuenta correspondiente en AWS Organizations.",
+            "C. Crear una SCP que prohíba los cambios en el trail específico de CloudTrail y aplicar la SCP a la unidad organizativa o cuenta correspondiente en AWS Organizations.",
             "D. Crear una política de IAM que prohíba los cambios en el trail específico de CloudTrail y aplicar la política a un nuevo grupo de IAM. Hacer que los miembros del equipo usen cuentas individuales de IAM que pertenezcan a ese grupo."
         ],
         "respuestas_correctas": [
@@ -1124,7 +1124,7 @@
         "pregunta": "80.- Un ingeniero de seguridad recibe la tarea de actualizar el prefijo de los archivos de registro (log file prefix) de un rastro (trail) existente en AWS CloudTrail. Al intentar guardar el cambio en la consola de CloudTrail, el ingeniero recibe el siguiente mensaje de error: \"Hay un problema con la política del bucket” ¿Qué acción permitirá al ingeniero de seguridad guardar el cambio?",
         "opciones": [
             "A. Crear un nuevo trail con el nuevo prefijo de archivos de registro, y luego eliminar el trail original. Actualizar la política del bucket existente en la consola de Amazon S3 con el nuevo prefijo, y luego actualizar el prefijo en la consola de CloudTrail.",
-            "B. Actualizar la política del bucket existente en la consola de Amazon S3 para permitir que el principal (usuario o rol) del ingeniero de seguridad ejecute la acción PutBucketPolicy, y luego actualizar el prefijo en la consola de CloudTrail.",
+            "B. Actualizar la política del bucket existente en la consola de Amazon S3 para permitir que el principal del ingeniero de seguridad ejecute la acción PutBucketPolicy, y luego actualizar el prefijo en la consola de CloudTrail.",
             "C. Actualizar la política del bucket existente en la consola de Amazon S3 con el nuevo prefijo de archivos de registro, y luego actualizar el prefijo en la consola de CloudTrail.",
             "D. Actualizar la política del bucket existente en la consola de Amazon S3 para permitir que el principal del ingeniero de seguridad ejecute la acción GetBucketPolicy, y luego actualizar el prefijo en la consola de CloudTrail."
         ],
@@ -1207,7 +1207,7 @@
         "opciones": [
             "A. Crear un usuario IAM local individual como usuario de emergencia para el equipo de seguridad. Crear un trail en AWS CloudTrail con el registro en Amazon CloudWatch Logs activado. Usar Amazon EventBridge para monitorear la actividad del usuario local.",
             "B. Crear un par de claves EC2 para el acceso de emergencia en la cuenta de AWS. Proporcionar el par de claves al equipo de seguridad. Usar AWS CloudTrail para monitorear la actividad relacionada al uso de las claves. Enviar notificaciones al equipo de seguridad utilizando Amazon SNS.",
-            "C. Crear un rol IAM de emergencia (break glass) para la cuenta. Permitir que los miembros del equipo de seguridad usen la operación AssumeRoleWithSAML. Crear un trail en AWS CloudTrail con registro en Amazon CloudWatch Logs activado. Usar Amazon EventBridge para monitorear la actividad del equipo de seguridad.",
+            "C. Crear un rol IAM de emergencia para la cuenta. Permitir que los miembros del equipo de seguridad usen la operación AssumeRoleWithSAML. Crear un trail en AWS CloudTrail con registro en Amazon CloudWatch Logs activado. Usar Amazon EventBridge para monitorear la actividad del equipo de seguridad.",
             "D. Crear un usuario IAM de emergencia local en el sistema operativo de cada instancia de carga de trabajo. Configurar grupos de seguridad sin restricciones en las instancias para permitir el acceso a estos usuarios de emergencia.",
             "E. Configurar AWS Systems Manager Session Manager para las instancias EC2. Configurar un filtro de AWS CloudTrail basado en el uso de Session Manager. Enviar los resultados a un tema de Amazon SNS."
         ],
@@ -1237,7 +1237,7 @@
     {
         "pregunta": "88.- Una empresa necesita mejorar su capacidad para identificar y prevenir políticas de IAM que otorguen acceso público o acceso entre cuentas a sus recursos. La empresa ha implementado AWS Organizations y ha comenzado a usar AWS Identity and Access Management Access Analyzer para refinar accesos demasiado amplios en las cuentas de la organización. Un ingeniero de seguridad debe automatizar una respuesta dentro de la organización ante cualquier política nueva que sea demasiado permisiva. La automatización debe remediar el acceso externo y notificar al equipo de seguridad de la empresa. ¿Qué combinación de pasos debe seguir el ingeniero de seguridad para cumplir con estos requisitos? (Elige tres opciones).",
         "opciones": [
-            "A. Crear una máquina de estado de AWS Step Functions que revise el tipo de recurso del hallazgo e incluya una instrucción explícita de Deny (denegación) en la política de confianza del rol IAM. Configurar la máquina de estado para que publique una notificación en un tema de Amazon SNS.",
+            "A. Crear una máquina de estado de AWS Step Functions que revise el tipo de recurso del hallazgo e incluya una instrucción explícita de Deny en la política de confianza del rol IAM. Configurar la máquina de estado para que publique una notificación en un tema de Amazon SNS.",
             "B. Crear un trabajo de AWS Batch que reenvíe cualquier hallazgo sobre tipos de recursos a una función de AWS Lambda. Configurar la función Lambda para agregar una instrucción explícita de Deny en la política de confianza del rol IAM. Configurar el trabajo de AWS Batch para que publique una notificación en un tema de Amazon SNS.",
             "C. En Amazon EventBridge, crear una regla de evento que detecte hallazgos activos de IAM Access Analyzer e invoque AWS Step Functions para resolverlos.",
             "D. En Amazon CloudWatch, crear un filtro de métricas que detecte hallazgos activos de IAM Access Analyzer e invoque AWS Batch para resolverlos.",
@@ -1254,9 +1254,9 @@
     {
         "pregunta": "89.- Un ingeniero de seguridad está configurando un mecanismo para enviar una alerta cuando se detecten tres o más intentos fallidos de inicio de sesión en la Consola de administración de AWS durante un período de 5 minutos. El ingeniero crea un trail en AWS CloudTrail para ayudar con esta tarea. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. En CloudTrail, activar los eventos Insights en el trail. Configurar una alarma sobre el insight con eventName igual a ConsoleLogin y errorMessage igual a \"Failed authentication\". Configurar un umbral de 3 y un período de 5 minutos.",
-            "B. Configurar CloudTrail para que envíe los eventos a Amazon CloudWatch Logs. Crear un filtro de métricas para el grupo de logs correspondiente. Crear un patrón de filtrado donde eventName sea ConsoleLogin y errorMessage sea \"Failed authentication\". Crear una alarma de CloudWatch con un umbral de 3 y un período de 5 minutos.",
-            "C. Crear una tabla en Amazon Athena a partir de los eventos de CloudTrail. Ejecutar una consulta donde eventName sea ConsoleLogin y errorMessage sea \"Failed authentication\". Crear una acción de notificación basada en la consulta que envíe una notificación mediante Amazon SNS cuando el conteo sea igual a 3 dentro de un período de 5 minutos.",
+            "A. En CloudTrail, activar los eventos Insights en el trail. Configurar una alarma sobre el insight con eventName igual a ConsoleLogin y errorMessage igual a Failed authentication. Configurar un umbral de 3 y un período de 5 minutos.",
+            "B. Configurar CloudTrail para que envíe los eventos a Amazon CloudWatch Logs. Crear un filtro de métricas para el grupo de logs correspondiente. Crear un patrón de filtrado donde eventName sea ConsoleLogin y errorMessage sea Failed authentication. Crear una alarma de CloudWatch con un umbral de 3 y un período de 5 minutos.",
+            "C. Crear una tabla en Amazon Athena a partir de los eventos de CloudTrail. Ejecutar una consulta donde eventName sea ConsoleLogin y errorMessage sea Failed authentication. Crear una acción de notificación basada en la consulta que envíe una notificación mediante Amazon SNS cuando el conteo sea igual a 3 dentro de un período de 5 minutos.",
             "D. En AWS Identity and Access Management Access Analyzer, crear un nuevo analizador. Configurar el analizador para que envíe una notificación de Amazon SNS cuando se produzcan 3 intentos fallidos de inicio de sesión por parte de cualquier usuario IAM en un período de 5 minutos."
         ],
         "respuestas_correctas": [
@@ -1271,7 +1271,7 @@
             "B. Activar Amazon GuardDuty en todas las regiones de AWS.",
             "C. Activar Amazon Detective en todas las regiones de AWS.",
             "D. Crear un tema de Amazon SNS. Crear una regla de Amazon EventBridge que responda a hallazgos y publique esos hallazgos en el tema de SNS.",
-            "E. Crear una función de AWS Lambda. Crear una regla de Amazon EventBridge que invoque la función Lambda para publicar los hallazgos mediante Amazon SES (Simple Email Service)."
+            "E. Crear una función de AWS Lambda. Crear una regla de Amazon EventBridge que invoque la función Lambda para publicar los hallazgos mediante Amazon SES."
         ],
         "respuestas_correctas": [
             "D",
@@ -1297,10 +1297,10 @@
     {
         "pregunta": "92.- Una empresa ha desplegado servidores en instancias de Amazon EC2 dentro de una VPC. Proveedores externos acceden a estos servidores por internet. Recientemente, la empresa desplegó una nueva aplicación en instancias EC2 que están en un nuevo rango CIDR. La empresa necesita que esta aplicación esté disponible para los proveedores externos. Un ingeniero de seguridad verificó que los grupos de seguridad y las ACLs de red (network ACLs) asociadas permiten los puertos necesarios en la dirección de entrada (inbound). Sin embargo, los proveedores no pueden conectarse a la aplicación. ¿Qué solución permitirá a los proveedores acceder a la aplicación?",
         "opciones": [
-            "A. Modificar el grupo de seguridad asociado a las instancias EC2 para que tenga las mismas reglas de salida (outbound) que de entrada (inbound).",
+            "A. Modificar el grupo de seguridad asociado a las instancias EC2 para que tenga las mismas reglas de salida que de entrada.",
             "B. Modificar la ACL de red asociada al rango CIDR para permitir tráfico de salida hacia puertos efímeros.",
-            "C. Modificar las reglas de entrada (inbound) en la puerta de enlace de internet (internet gateway) para permitir los puertos requeridos.",
-            "D. Modificar la ACL de red asociada al rango CIDR para que tenga las mismas reglas de salida (outbound) que de entrada (inbound)"
+            "C. Modificar las reglas de entrada en la puerta de enlace de internet para permitir los puertos requeridos.",
+            "D. Modificar la ACL de red asociada al rango CIDR para que tenga las mismas reglas de salida que de entrada."
         ],
         "respuestas_correctas": [
             "B"
@@ -1313,7 +1313,7 @@
             "A. Activar AWS Trusted Advisor. Configurar notificaciones de seguridad como webhooks en la sección de preferencias de la pipeline CI/CD.",
             "B. Activar AWS Config. Usar las reglas predefinidas o reglas personalizadas. Suscribir la pipeline CI/CD a un tema de Amazon SNS que reciba notificaciones desde AWS Config.",
             "C. Crear conjuntos de reglas en AWS CloudFormation Guard. Ejecutar validaciones de las plantillas de CloudFormation como una fase dentro del proceso de CI/CD.",
-            "D. Crear conjuntos de reglas como SCPs (Service Control Policies). Integrar las SCPs como parte del control de validación en una fase del proceso CI/CD."
+            "D. Crear conjuntos de reglas como SCPs. Integrar las SCPs como parte del control de validación en una fase del proceso CI/CD."
         ],
         "respuestas_correctas": [
             "C"
@@ -1338,7 +1338,7 @@
         "opciones": [
             "A. Usar AWS Certificate Manager para cifrar todo el tráfico entre el cliente y los servidores de la aplicación.",
             "B. Revisar los grupos de seguridad de la aplicación para asegurarse de que solo estén abiertos los puertos necesarios.",
-            "C. Usar Elastic Load Balancing para descargar (offload) el cifrado de Secure Sockets Layer (SSL).",
+            "C. Usar Elastic Load Balancing para descargar el cifrado de Secure Sockets Layer.",
             "D. Usar Amazon Inspector para escanear periódicamente las instancias de backend.",
             "E. Usar AWS Key Management Service (AWS KMS) para cifrar todo el tráfico entre el cliente y los servidores de la aplicación."
         ],
@@ -1351,9 +1351,9 @@
     {
         "pregunta": "96.- Una empresa está usando Amazon Elastic Container Service (Amazon ECS) para ejecutar su aplicación basada en contenedores en AWS. La empresa necesita asegurarse de que las imágenes de los contenedores no contengan vulnerabilidades graves. También debe garantizar que solo roles IAM específicos y cuentas de AWS específicas puedan acceder a esas imágenes. ¿Qué solución cumplirá con estos requisitos con el menor esfuerzo de gestión?",
         "opciones": [
-            "A. Obtener las imágenes desde un registro público de contenedores. Publicar las imágenes en repositorios de Amazon Elastic Container Registry (Amazon ECR) con el escaneo al momento de subir configurado (scan on push) en una cuenta centralizada de AWS. Usar una canalización CI/CD para desplegar las imágenes en distintas cuentas de AWS. Usar políticas basadas en identidad para restringir qué roles IAM pueden acceder a las imágenes.",
+            "A. Obtener las imágenes desde un registro público de contenedores. Publicar las imágenes en repositorios de Amazon Elastic Container Registry (Amazon ECR) con el escaneo al momento de subir configurado en una cuenta centralizada de AWS. Usar una canalización CI/CD para desplegar las imágenes en distintas cuentas de AWS. Usar políticas basadas en identidad para restringir qué roles IAM pueden acceder a las imágenes.",
             "B. Obtener las imágenes desde un registro público de contenedores. Publicar las imágenes en un registro privado de contenedores alojado en instancias de Amazon EC2 dentro de una cuenta centralizada de AWS. Desplegar herramientas de escaneo de contenedores basadas en el sistema operativo en esas instancias EC2 que ejecutan Amazon ECS. Restringir el acceso a las imágenes usando autenticación básica sobre HTTPS.",
-            "C. Obtener las imágenes desde un registro público de contenedores. Publicar las imágenes en repositorios de Amazon Elastic Container Registry (Amazon ECR) con escaneo al subir (scan on push) configurado en una cuenta centralizada de AWS. Usar una canalización CI/CD para desplegar las imágenes en distintas cuentas de AWS. Usar políticas del repositorio y políticas basadas en identidad para restringir qué roles IAM y cuentas pueden acceder a las imágenes.",
+            "C. Obtener las imágenes desde un registro público de contenedores. Publicar las imágenes en repositorios de Amazon Elastic Container Registry (Amazon ECR) con escaneo al subir configurado en una cuenta centralizada de AWS. Usar una canalización CI/CD para desplegar las imágenes en distintas cuentas de AWS. Usar políticas del repositorio y políticas basadas en identidad para restringir qué roles IAM y cuentas pueden acceder a las imágenes.",
             "D. Obtener las imágenes desde un registro público de contenedores. Publicar las imágenes en repositorios de AWS CodeArtifact en una cuenta centralizada de AWS. Usar una canalización CI/CD para desplegar las imágenes en distintas cuentas de AWS. Usar políticas del repositorio y políticas basadas en identidad para restringir qué roles IAM y cuentas pueden acceder a las imágenes."
         ],
         "respuestas_correctas": [
@@ -1364,7 +1364,7 @@
     {
         "pregunta": "97.- Los científicos de datos de una empresa quieren crear modelos de entrenamiento de inteligencia artificial y aprendizaje automático (IA/ML) usando Amazon SageMaker. Los modelos utilizarán grandes conjuntos de datos almacenados en un bucket de Amazon S3. Estos conjuntos de datos contienen información sensible. En promedio, los científicos de datos necesitan 30 días para entrenar los modelos. El bucket de S3 ha sido asegurado adecuadamente. La política de retención de datos de la empresa establece que todos los datos que tengan más de 45 días deben eliminarse del bucket de S3. ¿Qué acción debe tomar un ingeniero de seguridad para aplicar esta política de retención de datos?",
         "opciones": [
-            "A. Configurar una regla de ciclo de vida (Lifecycle rule) en el bucket de S3 para eliminar los objetos después de 45 días.",
+            "A. Configurar una regla de ciclo de vida en el bucket de S3 para eliminar los objetos después de 45 días.",
             "B. Crear una función de AWS Lambda que revise la fecha de última modificación de los objetos en S3 y elimine aquellos que tengan más de 45 días. Crear una notificación de evento en S3 para invocar la función Lambda cada vez que se realice una operación PutObject.",
             "C. Crear una función de AWS Lambda que revise la fecha de última modificación de los objetos en S3 y elimine aquellos que tengan más de 45 días. Crear una regla de Amazon EventBridge para invocar la función Lambda una vez al mes.",
             "D. Configurar S3 Intelligent-Tiering en el bucket de S3 para que los objetos se transfieran automáticamente a otra clase de almacenamiento."
@@ -1391,9 +1391,8 @@
             }
         ],
         "imagenes_respuesta":  [
-
             
-			{"opcion": "A", "url": "images/image98-2.png"},
+	    {"opcion": "A", "url": "images/image98-2.png"},
             {"opcion": "B", "url": "images/image98-3.png"},
             {"opcion": "D", "url": "images/image98-4.png"}
 			
@@ -1404,8 +1403,8 @@
         "opciones": [
             "A. La política de IAM necesita permitir también el permiso kms:DescribeKey.",
             "B. El bucket de S3 fue cambiado para usar una clave administrada por AWS (AWS managed key) para cifrar los objetos en reposo.",
-            "C. Se necesita agregar una política de bucket (bucket policy) que permita al usuario de IAM acceder a los objetos.",
-            "D. La política de la clave KMS fue editada para quitar el acceso completo a la clave para la cuenta de AWS."
+            "C. Se necesita agregar una política de bucket que permita al usuario de IAM acceder a los objetos.",
+            "D. Se ha editado la política de clave KMS para eliminar la capacidad de que la cuenta de AWS tenga acceso completo a la clave"
         ],
         "respuestas_correctas": [
             "D"
@@ -1448,9 +1447,9 @@
         "pregunta": "102.- Un ingeniero de seguridad necesita implementar un modelo de escritura única y lectura múltiple (WORM) para los datos que una empresa almacenará en buckets de Amazon S3. La empresa utiliza la clase de almacenamiento S3 Standard para todos sus buckets de S3. El ingeniero de seguridad debe asegurarse de que los objetos no puedan ser sobrescritos ni eliminados por ningún usuario, incluido el usuario root de la cuenta de AWS. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
             "A. Crear nuevos buckets de S3 con S3 Object Lock habilitado en modo de cumplimiento. Colocar los objetos en los buckets de S3.",
-            "B. Usar S3 Glacier Vault Lock para adjuntar una política de bloqueo de bóveda (Vault Lock) a nuevos buckets de S3. Esperar 24 horas para completar el proceso de bloqueo. Colocar los objetos en los buckets de S3.",
-            "C. Crear nuevos buckets de S3 con S3 Object Lock habilitado en modo de gobernanza (governance mode). Colocar los objetos en los buckets de S3.",
-            "D. Crear nuevos buckets de S3 con S3 Object Lock habilitado en modo de gobernanza (governance mode). Agregar una retención legal (legal hold) a los buckets de S3. Colocar los objetos en los buckets de S3."
+            "B. Usar S3 Glacier Vault Lock para adjuntar una política de Vault Lock a nuevos buckets de S3. Esperar 24 horas para completar el proceso de bloqueo. Colocar los objetos en los buckets de S3.",
+            "C. Crear nuevos buckets de S3 con S3 Object Lock habilitado en modo de gobernanza. Colocar los objetos en los buckets de S3.",
+            "D. Crear nuevos buckets de S3 con S3 Object Lock habilitado en modo de gobernanza. Agregar una retención legal a los buckets de S3. Colocar los objetos en los buckets de S3."
         ],
         "respuestas_correctas": [
             "A"
@@ -1583,7 +1582,7 @@
         "opciones": [
             "A. Asegurarse de que LambdaAuditRole tenga el permiso sts:AssumeRole para asumir el rol AcmeAuditFactoryRole.",
             "B. Asegurarse de que LambdaAuditRole tenga asociada la política administrada AWSLambdaBasicExecutionRole.",
-            "C. Asegurarse de que la política de confianza (trust policy) del rol AcmeAuditFactoryRole permita la acción sts:AssumeRole desde el rol LambdaAuditRole.",
+            "C. Asegurarse de que la política de confianza del rol AcmeAuditFactoryRole permita la acción sts:AssumeRole desde el rol LambdaAuditRole.",
             "D. Asegurarse de que la política de confianza de LambdaAuditRole permita la acción sts:AssumeRole desde el servicio lambda.amazonaws.com.",
             "E. Asegurarse de que la llamada a la API sts:AssumeRole se esté realizando contra el endpoint de la región us-east-1."
         ],
@@ -1597,8 +1596,8 @@
         "pregunta": "112.- Una empresa tiene cuentas de AWS dentro de una organización en AWS Organizations. La organización incluye una cuenta dedicada a la seguridad. Toda la actividad en las cuentas miembro debe ser registrada y reportada a la cuenta de seguridad dedicada. La empresa debe conservar todos los registros de actividad en una ubicación de almacenamiento segura dentro de la cuenta de seguridad por un período de 2 años. No se permiten modificaciones ni eliminaciones de los registros. ¿Qué combinación de pasos cumplirá con estos requisitos con el menor esfuerzo operativo? (Elige dos opciones).",
         "opciones": [
             "A. En la cuenta de seguridad dedicada, crear un bucket de Amazon S3. Configurar S3 Object Lock en modo de cumplimiento con un período de retención de 2 años. Establecer una política del bucket que permita que la cuenta de administración de la organización escriba en el bucket.",
-            "B. En la cuenta de seguridad dedicada, crear un bucket de Amazon S3. Configurar S3 Object Lock en modo de cumplimiento (compliance mode) con un período de retención de 2 años. Establecer una política del bucket que permita que las cuentas miembro de la organización escriban en el bucket.",
-            "C. En la cuenta de seguridad dedicada, crear un bucket de Amazon S3 con una configuración de ciclo de vida (Lifecycle) que expire los objetos después de 2 años. Establecer una política del bucket que permita que las cuentas miembro de la organización escriban en el bucket.",
+            "B. En la cuenta de seguridad dedicada, crear un bucket de Amazon S3. Configurar S3 Object Lock en modo de cumplimiento con un período de retención de 2 años. Establecer una política del bucket que permita que las cuentas miembro de la organización escriban en el bucket.",
+            "C. En la cuenta de seguridad dedicada, crear un bucket de Amazon S3 con una configuración de ciclo de vida que expire los objetos después de 2 años. Establecer una política del bucket que permita que las cuentas miembro de la organización escriban en el bucket.",
             "D. Crear un AWS CloudTrail trail a nivel de organización. Configurar los registros para que se envíen al bucket de S3 de registro en la cuenta de seguridad dedicada.",
             "E. Activar AWS CloudTrail en cada cuenta. Configurar los registros para que se envíen a un bucket de Amazon S3 creado en la cuenta de administración de la organización. Reenviar los registros al bucket de S3 en la cuenta de seguridad dedicada utilizando AWS Lambda y Amazon Kinesis Data Firehose."
         ],
@@ -1708,7 +1707,7 @@
     {
         "pregunta": "119.- Una empresa tiene cuentas de AWS que están organizadas dentro de una organización de AWS Organizations. Un bucket de Amazon S3 en una de las cuentas es accesible públicamente. Un ingeniero de seguridad debe modificar la configuración para que el bucket de S3 deje de ser accesible públicamente. Además, debe garantizar que el bucket no pueda hacerse público en el futuro. ¿Qué solución cumple con estos requisitos?",
         "opciones": [
-            "A. Configurar el bucket de S3 para que use una clave de AWS Key Management Service (AWS KMS). Cifrar todos los objetos en el bucket mediante una política de bucket que exija cifrado. Configurar una SCP para denegar la acción s3:GetObject en la unidad organizativa (OU) que contiene la cuenta de AWS.",
+            "A. Configurar el bucket de S3 para que use una clave de AWS Key Management Service (AWS KMS). Cifrar todos los objetos en el bucket mediante una política de bucket que exija cifrado. Configurar una SCP para denegar la acción s3:GetObject en la unidad organizativa que contiene la cuenta de AWS.",
             "B. Habilitar la configuración de PublicAccessBlock en el bucket de S3. Configurar una SCP para denegar la acción s3:GetObject para la OU que contiene la cuenta de AWS.",
             "C. Habilitar la configuración de PublicAccessBlock en el bucket de S3. Configurar una SCP para denegar la acción s3:PutPublicAccessBlock para la OU que contiene la cuenta de AWS.",
             "D. Configurar el bucket de S3 para que use S3 Object Lock en modo de gobernanza. Configurar una SCP para denegar la acción s3:PutPublicAccessBlock para la OU que contiene la cuenta de AWS."
@@ -1795,7 +1794,7 @@
             "A. Configurar la política IAM usada por el rol de IAM para que tenga acceso a las acciones necesarias de la API cloudwatch: que publican registros.",
             "B. Ajustar el rol vinculado al servicio de Auto Scaling para que tenga permisos para escribir en CloudWatch Logs.",
             "C. Configurar la política IAM usada por el rol de IAM para que tenga acceso a las acciones necesarias de la API logs: de AWS que publican registros.",
-            "D. Agregar un endpoint de interfaz (VPC endpoint) para proporcionar una ruta hacia CloudWatch Logs."
+            "D. Agregar un endpoint de interfaz para proporcionar una ruta hacia CloudWatch Logs."
         ],
         "respuestas_correctas": [
             "C"
@@ -1806,7 +1805,7 @@
         "pregunta": "126.- Una empresa utiliza contenedores de Amazon Elastic Container Service (Amazon ECS) con el tipo de lanzamiento Fargate. Los contenedores ejecutan aplicaciones web y móviles desarrolladas en Java y Node.js. Para cumplir con los requisitos de segmentación de red, cada unidad de negocio de la empresa implementa sus aplicaciones en su propia cuenta dedicada de AWS. Cada unidad de negocio almacena las imágenes de los contenedores en un registro privado de Amazon Elastic Container Registry (Amazon ECR) en su respectiva cuenta. Un ingeniero de seguridad debe recomendar una solución para escanear los contenedores de ECS y los registros ECR en busca de vulnerabilidades en sistemas operativos y bibliotecas de lenguajes de programación. El equipo de auditoría de la empresa debe poder identificar vulnerabilidades potenciales en cualquiera de las cuentas donde se implementan las aplicaciones. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
             "A. En cada cuenta, actualizar el registro ECR para usar Amazon Inspector en lugar del servicio de escaneo predeterminado. Configurar Amazon Inspector para enviar los hallazgos de vulnerabilidades a AWS Security Hub en una cuenta central de seguridad. Dar acceso al equipo de auditoría para que revise los hallazgos desde Security Hub.",
-            "B. En cada cuenta, configurar AWS Config para monitorear la configuración de los contenedores ECS y del registro ECR. Configurar paquetes de conformidad (conformance packs) de AWS Config para escaneo de vulnerabilidades. Crear un agregador de AWS Config en una cuenta central para recopilar detalles de configuración y cumplimiento de todas las cuentas. Dar acceso al equipo de auditoría a AWS Config en la cuenta con el agregador.",
+            "B. En cada cuenta, configurar AWS Config para monitorear la configuración de los contenedores ECS y del registro ECR. Configurar paquetes de conformidad de AWS Config para escaneo de vulnerabilidades. Crear un agregador de AWS Config en una cuenta central para recopilar detalles de configuración y cumplimiento de todas las cuentas. Dar acceso al equipo de auditoría a AWS Config en la cuenta con el agregador.",
             "C. En cada cuenta, configurar AWS Audit Manager para escanear los contenedores ECS y el registro ECR. Configurar Audit Manager para enviar los hallazgos de vulnerabilidades a AWS Security Hub en una cuenta central de seguridad. Dar acceso al equipo de auditoría para revisar los hallazgos desde Security Hub.",
             "D. En cada cuenta, configurar Amazon GuardDuty para escanear los contenedores ECS y el registro ECR. Configurar GuardDuty para enviar los hallazgos de vulnerabilidades a AWS Security Hub en una cuenta central de seguridad. Dar acceso al equipo de auditoría para revisar los hallazgos desde Security Hub."
         ],
@@ -1925,7 +1924,7 @@
         "pregunta": "135.- Dos instancias de Amazon EC2 ubicadas en subredes diferentes deberían poder conectarse entre sí, pero no pueden. Se ha confirmado que otros hosts en las mismas subredes pueden comunicarse correctamente, y que los grupos de seguridad tienen reglas ALLOW válidas que permiten este tráfico. ¿Cuál de los siguientes pasos de resolución de problemas se debería realizar?",
         "opciones": [
             "A. Revisar los grupos de seguridad de entrada y salida, buscando reglas DENY",
-            "B. Revisar las reglas de entrada y salida de las listas de control de acceso de red (Network ACL), buscando reglas DENY",
+            "B. Revisar las reglas de entrada y salida de las listas de control de acceso de red, buscando reglas DENY",
             "C. Revisar los códigos de motivo de paquetes rechazados en los registros de flujo de VPC (VPC Flow Logs)",
             "D. Usar AWS X-Ray para rastrear el flujo de la aplicación de extremo a extremo"
         ],
@@ -1967,8 +1966,8 @@
     {
         "pregunta": "138.- Una empresa está utilizando una clave administrada por AWS (AWS owned key) del Servicio de Administración de Claves de AWS (AWS KMS) en su aplicación para cifrar archivos en una cuenta de AWS. El equipo de seguridad de la empresa quiere tener la capacidad de cambiar a un nuevo material de clave para los archivos nuevos siempre que ocurra una posible filtración de clave. Un ingeniero de seguridad debe implementar una solución que permita al equipo de seguridad cambiar la clave en cualquier momento. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Crear una clave administrada por el cliente (customer managed key) nueva. Agregarle una programación de rotación de clave. Invocar la rotación de clave cada vez que el equipo de seguridad solicite un cambio.",
-            "B. Crear una clave administrada por AWS (AWS managed key) nueva. Agregarle una programación de rotación de clave. Invocar la rotación cada vez que el equipo de seguridad solicite un cambio.",
+            "A. Crear una clave administrada por el cliente nueva. Agregarle una programación de rotación de clave. Invocar la rotación de clave cada vez que el equipo de seguridad solicite un cambio.",
+            "B. Crear una clave administrada por AWS nueva. Agregarle una programación de rotación de clave. Invocar la rotación cada vez que el equipo de seguridad solicite un cambio.",
             "C. Crear un alias de clave. Crear una nueva clave administrada por el cliente cada vez que el equipo de seguridad solicite un cambio de clave. Asociar el alias con la nueva clave.",
             "D. Crear un alias de clave. Crear una nueva clave administrada por AWS cada vez que el equipo de seguridad solicite un cambio. Asociar el alias con la nueva clave."
         ],
@@ -2008,7 +2007,7 @@
         "opciones": [
             "A. Agregar un NAT Gateway a la VPC para permitir el acceso al endpoint de Secrets Manager.",
             "B. Agregar un VPC endpoint de tipo gateway a la VPC para permitir el acceso al endpoint de Secrets Manager.",
-            "C. Agregar un VPC endpoint de tipo interfaz (interface endpoint) a la VPC para permitir el acceso al endpoint de Secrets Manager.",
+            "C. Agregar un VPC endpoint de tipo interfaz a la VPC para permitir el acceso al endpoint de Secrets Manager.",
             "D. Agregar un Internet Gateway a la VPC para permitir el acceso al endpoint de Secrets Manager."
         ],
         "respuestas_correctas": [
@@ -2019,10 +2018,10 @@
     {
         "pregunta": "142.- Una empresa tiene dos cuentas de AWS: la Cuenta A y la Cuenta B. Cada cuenta tiene su propia VPC. Una aplicación que se ejecuta en la VPC de la Cuenta A necesita escribir en un bucket de Amazon S3 que está en la Cuenta B. La aplicación en la Cuenta A ya tiene permisos para escribir en el bucket S3 de la Cuenta B. La aplicación y el bucket de S3 están en la misma región de AWS. La empresa no puede enviar tráfico de red por Internet público. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. En ambas cuentas, crear un Transit Gateway y establecer asociaciones de VPC (VPC attachments) en una subred por cada zona de disponibilidad. Actualizar las tablas de ruteo de las VPC.",
-            "B. Implementar un appliance VPN de software en la Cuenta A. Crear una conexión VPN entre este appliance y una puerta de enlace virtual privada (virtual private gateway) en la Cuenta B.",
-            "C. Crear una conexión de emparejamiento de VPC (VPC peering) entre la VPC de la Cuenta A y la VPC de la Cuenta B. Actualizar las tablas de ruteo, listas de control de acceso de red (ACLs) y grupos de seguridad para permitir el tráfico entre los rangos de IP emparejados.",
-            "D. En la Cuenta A, crear un punto de enlace VPC (gateway endpoint) para Amazon S3. Actualizar la tabla de ruteo de la VPC en la Cuenta A."
+            "A. En ambas cuentas, crear un Transit Gateway y establecer asociaciones de VPC en una subred por cada zona de disponibilidad. Actualizar las tablas de ruteo de las VPC.",
+            "B. Implementar un appliance VPN de software en la Cuenta A. Crear una conexión VPN entre este appliance y una puerta de enlace virtual privada en la Cuenta B.",
+            "C. Crear una conexión de emparejamiento de VPC entre la VPC de la Cuenta A y la VPC de la Cuenta B. Actualizar las tablas de ruteo, listas de control de acceso de red y grupos de seguridad para permitir el tráfico entre los rangos de IP emparejados.",
+            "D. En la Cuenta A, crear un punto de enlace VPC para Amazon S3. Actualizar la tabla de ruteo de la VPC en la Cuenta A."
         ],
         "respuestas_correctas": [
             "D"
@@ -2046,7 +2045,7 @@
         "pregunta": "144.- Una empresa de medios en línea tiene una aplicación que los clientes usan para ver eventos en todo el mundo. La aplicación está alojada en un conjunto de instancias de Amazon EC2 que ejecutan Amazon Linux 2. La empresa utiliza AWS Systems Manager para administrar las instancias EC2. Aplica parches y actualizaciones de la aplicación usando la línea base de parches AWS-AmazonLinux2DefaultPatchBaseline en Systems Manager Patch Manager. La empresa está preocupada por posibles ataques a la aplicación durante la semana de un evento importante. Necesitan una solución que permita desplegar parches inmediatamente a todas las instancias EC2 en respuesta a un incidente de seguridad o una vulnerabilidad. Además, la solución debe ofrecer evidencia centralizada de que los parches fueron aplicados correctamente. ¿Qué combinación de pasos cumplirá con estos requisitos? (Elige dos opciones)",
         "opciones": [
             "A. Crear una nueva línea base de parches en Patch Manager. Especificar Amazon Linux 2 como el producto. Especificar “Security” como la clasificación. Configurar la aprobación automática de parches en 0 días. Asegurarse de que esta nueva línea base sea la predeterminada para Amazon Linux 2.",
-            "B. Usar la opción \"Patch Now\" con la operación de escaneo e instalación en la consola de Patch Manager para aplicar los parches de la línea base a todos los nodos. Especificar un bucket de Amazon S3 como destino para guardar los registros del parcheo.",
+            "B. Usar la opción Patch Now con la operación de escaneo e instalación en la consola de Patch Manager para aplicar los parches de la línea base a todos los nodos. Especificar un bucket de Amazon S3 como destino para guardar los registros del parcheo.",
             "C. Usar la función Clone de Patch Manager para crear una copia de la línea base incorporada AWS-AmazonLinux2DefaultPatchBaseline. Configurar la aprobación automática de parches en 1 día.",
             "D. Crear una política de parches que actualice todos los nodos administrados y envíe los registros de operación de parches a un bucket de Amazon S3. Usar una programación personalizada de escaneo para que Patch Manager verifique cada hora si hay nuevos parches. Asignar la línea base a la política de parches.",
             "E. Usar Systems Manager Application Manager para inspeccionar las versiones de los paquetes instalados en las instancias EC2. Además, usar Application Manager para validar que los parches fueron instalados correctamente."
@@ -2075,7 +2074,7 @@
         "opciones": [
             "A. Configurar los clústeres de EKS para usar endpoints VPC privados de S3. Configurar los buckets de S3 para el registro de logs.",
             "B. Habilitar los registros del componente del servidor API de Kubernetes para cada clúster.",
-            "C. Habilitar CORS (uso compartido de recursos entre orígenes) en el bucket de S3 que se utiliza para los registros.",
+            "C. Habilitar CORS en el bucket de S3 que se utiliza para los registros.",
             "D. Configurar CloudWatch. Ver los eventos en la consola de CloudWatch."
         ],
         "respuestas_correctas": [
