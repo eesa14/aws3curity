@@ -1642,7 +1642,7 @@
         ]
     },
     {
-        "pregunta": "115.- na empresa necesita seguir las mejores prácticas de seguridad para implementar recursos a partir de una plantilla de AWS CloudFormation. La plantilla de CloudFormation debe poder configurar credenciales sensibles de una base de datos. La empresa ya utiliza AWS Key Management Service (AWS KMS) y AWS Secrets Manager. ¿Qué solución cumplirá con los requisitos?",
+        "pregunta": "115.- Una empresa necesita seguir las mejores prácticas de seguridad para implementar recursos a partir de una plantilla de AWS CloudFormation. La plantilla de CloudFormation debe poder configurar credenciales sensibles de una base de datos. La empresa ya utiliza AWS Key Management Service (AWS KMS) y AWS Secrets Manager. ¿Qué solución cumplirá con los requisitos?",
         "opciones": [
             "A. Usar una referencia dinámica en la plantilla de CloudFormation para hacer referencia a las credenciales de la base de datos almacenadas en Secrets Manager.",
             "B. Usar un parámetro en la plantilla de CloudFormation para referenciar las credenciales de la base de datos. Cifrar la plantilla de CloudFormation usando AWS KMS.",
@@ -2098,7 +2098,7 @@
     {
         "pregunta": "148.- Una empresa de comercio electrónico está desarrollando una nueva arquitectura para una versión de su aplicación. La empresa necesita implementar TLS para el tráfico entrante hacia la aplicación. El tráfico proviene de internet. No es necesario implementar TLS de extremo a extremo, ya que la empresa está preocupada por el impacto en el rendimiento. Los tipos de tráfico entrante serán HTTP y HTTPS, y la aplicación utiliza los puertos 80 y 443. ¿Qué debe hacer un ingeniero de seguridad para cumplir con estos requisitos?",
         "opciones": [
-            "A. Crear un Application Load Balancer (ALB) público. Crear dos listeners: uno en el puerto 80 y otro en el puerto 443. Crear un grupo de destino (target group). Crear una regla para redirigir el tráfico del puerto 80 al listener en el puerto 443. Provisionar un certificado TLS público en AWS Certificate Manager (ACM). Adjuntar el certificado al listener en el puerto 443.",
+            "A. Crear un Application Load Balancer (ALB) público. Crear dos listeners: uno en el puerto 80 y otro en el puerto 443. Crear un grupo de destino. Crear una regla para redirigir el tráfico del puerto 80 al listener en el puerto 443. Provisionar un certificado TLS público en AWS Certificate Manager (ACM). Adjuntar el certificado al listener en el puerto 443.",
             "B. Crear un Application Load Balancer (ALB) público. Crear dos listeners: uno en el puerto 80 y otro en el puerto 443. Crear un grupo de destino. Crear una regla para redirigir el tráfico del puerto 80 al listener en el puerto 443. Provisionar un certificado TLS público en AWS Certificate Manager (ACM). Adjuntar el certificado al listener en el puerto 80.",
             "C. Crear un Network Load Balancer (NLB) público. Crear dos listeners: uno en el puerto 80 y otro en el puerto 443. Crear un grupo de destino. Crear una regla para redirigir el tráfico del puerto 80 al listener en el puerto 443. Configurar el protocolo del listener en el puerto 443 como TLS.",
             "D. Crear un Network Load Balancer (NLB) público. Crear un listener en el puerto 443. Crear un grupo de destino. Crear una regla para redirigir el tráfico del puerto 443 al grupo de destino. Configurar el protocolo del listener en el puerto 443 como TLS."
