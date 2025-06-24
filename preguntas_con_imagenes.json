@@ -1613,7 +1613,7 @@
             "A. Usar la consola de administración de AWS para editar la estructura JSON del secreto en Secrets Manager, de modo que el secreto cumpla automáticamente con el formato requerido por la base de datos.",
             "B. Asegurarse de que el grupo de seguridad asociado a la función Lambda permita conexiones salientes hacia la instancia EC2. Asegurarse de que el grupo de seguridad de la instancia EC2 permita conexiones entrantes desde el grupo de seguridad de la función Lambda.",
             "C. Usar el comando list-secrets de Secrets Manager en la AWS CLI para listar el secreto. Identificar las credenciales de la base de datos. Usar el comando rotate-secret de Secrets Manager en la CLI para forzar la rotación inmediata del secreto.",
-            "D. Agregar una puerta de enlace a Internet (Internet Gateway) a la VPC. Crear una puerta de enlace NAT en una subred pública. Actualizar las tablas de ruteo de la VPC para que el tráfico desde la función Lambda y desde la instancia EC2 pueda llegar al endpoint público de Secrets Manager."
+            "D. Agregar una puerta de enlace a Internet a la VPC. Crear una puerta de enlace NAT en una subred pública. Actualizar las tablas de ruteo de la VPC para que el tráfico desde la función Lambda y desde la instancia EC2 pueda llegar al endpoint público de Secrets Manager."
         ],
         "respuestas_correctas": [
             "B"
@@ -1925,7 +1925,7 @@
         "opciones": [
             "A. Revisar los grupos de seguridad de entrada y salida, buscando reglas DENY",
             "B. Revisar las reglas de entrada y salida de las listas de control de acceso de red, buscando reglas DENY",
-            "C. Revisar los códigos de motivo de paquetes rechazados en los registros de flujo de VPC (VPC Flow Logs)",
+            "C. Revisar los códigos de motivo de paquetes rechazados en los registros de flujo de VPC",
             "D. Usar AWS X-Ray para rastrear el flujo de la aplicación de extremo a extremo"
         ],
         "respuestas_correctas": [
@@ -2212,7 +2212,7 @@
         "opciones": [
             "A. Crear una alarma de Amazon CloudWatch que invoque una función de AWS Lambda cuando la utilización de CPU de una instancia EC2 alcance el 90%. Programar la función Lambda para actualizar los grupos de seguridad adjuntos a la instancia EC2 y denegar el tráfico entrante por los puertos 80 y 443.",
             "B. Colocar las instancias EC2 en un grupo de Auto Scaling detrás de un balanceador de carga de Elastic Load Balancing (ELB). Usar Amazon CloudFront con Amazon S3 como origen.",
-            "C. Configurar un entorno de recuperación ante desastres (disaster recovery, DR) en espera activa (warm standby). Cambiar a este entorno si se detecta un ataque DDoS en la aplicación.",
+            "C. Configurar un entorno de recuperación ante desastres (DR) en espera activa. Cambiar a este entorno si se detecta un ataque DDoS en la aplicación.",
             "D. Suscribirse a AWS Shield Advanced. Configurar permisos para permitir que el Shield Response Team gestione los recursos en nombre de la empresa durante un evento DDoS."
         ],
         "respuestas_correctas": [
