@@ -2542,7 +2542,7 @@
         "pregunta": "180.- Una empresa quiere recibir notificaciones por correo electrónico automáticas cuando se detecten claves de acceso de cuentas de desarrolladores de AWS en sitios de repositorios de código. ¿Qué solución proporcionará las notificaciones por correo electrónico requeridas?",
         "opciones": [
             "A. Crear una regla de Amazon EventBridge para enviar notificaciones por correo electrónico mediante Amazon SNS (Simple Notification Service) para hallazgos de Amazon GuardDuty del tipo UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS.",
-            "B. Cambiar la información de contacto de tipo \"Operaciones\" de la cuenta de AWS a una dirección de correo electrónico distinta. Consultar periódicamente esta dirección de correo para revisar notificaciones.",
+            "B. Cambiar la información de contacto de tipo Operaciones de la cuenta de AWS a una dirección de correo electrónico distinta. Consultar periódicamente esta dirección de correo para revisar notificaciones.",
             "C. Crear una regla de Amazon EventBridge que reaccione a eventos de AWS Health con un valor de \"Risk\" en la categoría de servicio. Configurar notificaciones por correo usando Amazon SNS.",
             "D. Implementar un nuevo software de detección de anomalías. Ingerir los registros de AWS CloudTrail. Configurar la supervisión para eventos de tipo ConsoleLogin en la Consola de Administración de AWS. Configurar notificaciones por correo desde el software de detección de anomalías."
         ],
