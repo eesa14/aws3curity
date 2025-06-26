@@ -2541,9 +2541,9 @@
     {
         "pregunta": "180.- Una empresa quiere recibir notificaciones por correo electrónico automáticas cuando se detecten claves de acceso de cuentas de desarrolladores de AWS en sitios de repositorios de código. ¿Qué solución proporcionará las notificaciones por correo electrónico requeridas?",
         "opciones": [
-            "A. Crear una regla de Amazon EventBridge para enviar notificaciones por correo electrónico mediante Amazon SNS (Simple Notification Service) para hallazgos de Amazon GuardDuty del tipo UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS.",
+            "A. Crear una regla de Amazon EventBridge para enviar notificaciones por correo electrónico mediante Amazon SNS para hallazgos de Amazon GuardDuty del tipo UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS.",
             "B. Cambiar la información de contacto de tipo Operaciones de la cuenta de AWS a una dirección de correo electrónico distinta. Consultar periódicamente esta dirección de correo para revisar notificaciones.",
-            "C. Crear una regla de Amazon EventBridge que reaccione a eventos de AWS Health con un valor de \"Risk\" en la categoría de servicio. Configurar notificaciones por correo usando Amazon SNS.",
+            "C. Crear una regla de Amazon EventBridge que reaccione a eventos de AWS Health con un valor de Risk en la categoría de servicio. Configurar notificaciones por correo usando Amazon SNS.",
             "D. Implementar un nuevo software de detección de anomalías. Ingerir los registros de AWS CloudTrail. Configurar la supervisión para eventos de tipo ConsoleLogin en la Consola de Administración de AWS. Configurar notificaciones por correo desde el software de detección de anomalías."
         ],
         "respuestas_correctas": [
@@ -2623,7 +2623,7 @@
     {
         "pregunta": "186.- Una empresa usó AWS Organizations para configurar un entorno con múltiples cuentas de AWS. Actualmente, la organización de la empresa tiene dos cuentas de AWS, pero se espera agregar más de 50 cuentas adicionales durante los próximos 12 meses. La empresa requiere que todas las cuentas actuales y futuras usen Amazon GuardDuty. Cada cuenta actual ya tiene GuardDuty activado. Actualmente, la empresa revisa los hallazgos de GuardDuty iniciando sesión en cada cuenta individualmente. La empresa desea tener una vista centralizada de los hallazgos de GuardDuty de las cuentas existentes y de cualquier cuenta futura. Además, debe asegurarse de que GuardDuty se active automáticamente en cualquier nueva cuenta de AWS. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Activar AWS Security Hub en la cuenta principal (management account) de la organización. Configurar GuardDuty dentro de esa cuenta para enviar todos los hallazgos a Security Hub.",
+            "A. Activar AWS Security Hub en la cuenta principal de la organización. Configurar GuardDuty dentro de esa cuenta para enviar todos los hallazgos a Security Hub.",
             "B. Crear una nueva cuenta de AWS dentro de la organización. Activar GuardDuty en esa cuenta. Designarla como cuenta administradora delegada para GuardDuty. Configurar GuardDuty para agregar las cuentas existentes como cuentas miembro. Seleccionar la opción para agregar automáticamente nuevas cuentas de AWS a la organización.",
             "C. Crear una nueva cuenta en la organización. Activar GuardDuty en esa cuenta. Activar AWS Security Hub en cada cuenta. Seleccionar la opción para agregar automáticamente nuevas cuentas de AWS a la organización.",
             "D. Activar AWS Security Hub en la cuenta principal de la organización. Designar esa cuenta como administradora delegada de Security Hub. Agregar las cuentas existentes como cuentas miembro. Seleccionar la opción para agregar automáticamente nuevas cuentas a la organización. Enviar todos los hallazgos de Security Hub a la cuenta de GuardDuty de la organización."
