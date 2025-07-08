@@ -1721,10 +1721,10 @@
         "pregunta": "120.- Una empresa está diseñando una nueva pila de aplicaciones. El diseño incluye servidores web y servidores backend alojados en instancias de Amazon EC2. También incluye un clúster de base de datos Amazon Aurora MySQL. Las instancias EC2 están en un grupo de Auto Scaling que usa plantillas de lanzamiento (launch templates). Las instancias EC2 para la capa web y la capa backend utilizan volúmenes de Amazon EBS, pero ninguna de las capas está cifrada en reposo. Un ingeniero de seguridad necesita implementar cifrado en reposo. ¿Qué combinación de pasos cumplirá con estos requisitos? (Elige dos opciones).",
         "opciones": [
             "A. Modificar la configuración predeterminada de cifrado de EBS en la región de AWS objetivo para habilitar el cifrado. Usar una actualización de instancias del grupo de Auto Scaling.",
-            "B. Modificar las plantillas de lanzamiento para la capa web y la capa backend para agregar cifrado de AWS Certificate Manager (ACM) a los volúmenes EBS adjuntos. Usar una actualización de instancias del grupo de Auto Scaling.",
-            "C. Crear un nuevo clúster de base de datos cifrado con AWS Key Management Service (AWS KMS) a partir de una instantánea del clúster existente.",
-            "D. Aplicar cifrado de AWS Key Management Service (AWS KMS) al clúster de base de datos existente.",
-            "E. Aplicar cifrado de AWS Certificate Manager (ACM) al clúster de base de datos existente."
+            "B. Modificar las plantillas de lanzamiento para la capa web y la capa backend para agregar cifrado de ACM a los volúmenes EBS adjuntos. Usar una actualización de instancias del grupo de Auto Scaling.",
+            "C. Crear un nuevo clúster de base de datos cifrado con AWS KMS a partir de una instantánea del clúster existente.",
+            "D. Aplicar cifrado de AWS KMS al clúster de base de datos existente.",
+            "E. Aplicar cifrado de ACM al clúster de base de datos existente."
         ],
         "respuestas_correctas": [
             "C",
