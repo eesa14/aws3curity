@@ -2211,8 +2211,8 @@
         "pregunta": "156.- Una empresa está preocupada por posibles ataques DDoS. Tiene una aplicación web que se ejecuta en instancias de Amazon EC2. La aplicación usa Amazon S3 para servir contenido estático como imágenes y videos. Un ingeniero de seguridad debe crear una arquitectura resistente que pueda soportar ataques DDoS. ¿Qué solución cumplirá con estos requisitos de la forma MÁS rentable?",
         "opciones": [
             "A. Crear una alarma de Amazon CloudWatch que invoque una función de AWS Lambda cuando la utilización de CPU de una instancia EC2 alcance el 90%. Programar la función Lambda para actualizar los grupos de seguridad adjuntos a la instancia EC2 y denegar el tráfico entrante por los puertos 80 y 443.",
-            "B. Colocar las instancias EC2 en un grupo de Auto Scaling detrás de un balanceador de carga de Elastic Load Balancing (ELB). Usar Amazon CloudFront con Amazon S3 como origen.",
-            "C. Configurar un entorno de recuperación ante desastres (DR) en espera activa. Cambiar a este entorno si se detecta un ataque DDoS en la aplicación.",
+            "B. Colocar las instancias EC2 en un grupo de Auto Scaling detrás de un balanceador de carga de Elastic Load Balancing. Usar Amazon CloudFront con Amazon S3 como origen.",
+            "C. Configurar un entorno de recuperación ante desastres en espera activa. Cambiar a este entorno si se detecta un ataque DDoS en la aplicación.",
             "D. Suscribirse a AWS Shield Advanced. Configurar permisos para permitir que el Shield Response Team gestione los recursos en nombre de la empresa durante un evento DDoS."
         ],
         "respuestas_correctas": [
