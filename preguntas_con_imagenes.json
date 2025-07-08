@@ -3185,7 +3185,7 @@
         "opciones": [
             "A. Desactivar el uso de la cuenta root en la raíz de la organización. Habilitar autenticación multifactor (MFA) para la cuenta root de cada cuenta miembro.",
             "B. Configurar políticas de usuario IAM para restringir las capacidades de la cuenta root en cada cuenta miembro.",
-            "C. Crear una unidad organizativa (OU) en Organizations y adjuntar una SCP (política de control de servicio) que controle el uso de la cuenta root. Agregar todas las cuentas miembro a la nueva OU.",
+            "C. Crear una unidad organizativa en Organizations y adjuntar una SCP que controle el uso de la cuenta root. Agregar todas las cuentas miembro a la nueva OU.",
             "D. Configurar AWS CloudTrail para integrarse con Amazon CloudWatch Logs. Crear un filtro de métricas para RootAccountUsage."
         ],
         "respuestas_correctas": [
