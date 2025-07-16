@@ -3951,7 +3951,7 @@
         "opciones": [
             "A. Configurar AWS Systems Manager Run Command para que se ejecute cuando GuardDuty detecte que una instancia está infectada. Usar Run Command para quitar todos los adaptadores de red del sistema operativo de la instancia comprometida y añadir la etiqueta “Infected” a la instancia.",
             "B. Crear una función de AWS Lambda que se ejecute cuando GuardDuty detecte que una instancia está infectada. Programar la función Lambda para eliminar todas las interfaces de red elásticas asociadas a la instancia y añadir la etiqueta “Infected” a la instancia.",
-            "C. Crear una función de AWS Lambda que se ejecute cuando GuardDuty detecte que una instancia está infectada. Programar la función Lambda para separar todos los volúmenes de Amazon Elastic Block Store (Amazon EBS) de la instancia, añadir la etiqueta “Infected” a los volúmenes EBS y, posteriormente, terminar la instancia.",
+            "C. Crear una función de AWS Lambda que se ejecute cuando GuardDuty detecte que una instancia está infectada. Programar la función Lambda para separar todos los volúmenes de Amazon EBS de la instancia, añadir la etiqueta “Infected” a los volúmenes EBS y, posteriormente, terminar la instancia.",
             "D. Definir una VPC independiente para aislar instancias de EC2 y un grupo de seguridad que no permita tráfico de red alguno. Crear una función de AWS Lambda que se ejecute cuando GuardDuty detecte que una instancia está infectada. Programar la función Lambda para mover la instancia a la VPC aislada y asignarle el grupo de seguridad."
         ],
         "respuestas_correctas": [
@@ -3977,7 +3977,7 @@
         "opciones": [
             "A. Usar las comprobaciones de la categoría de seguridad en AWS Trusted Advisor. Buscar el rol y examinar las acciones realizadas.",
             "B. Usar la pestaña Access Advisor en AWS Identity and Access Management (IAM). Buscar Security Hub y las acciones realizadas.",
-            "C. Usar AWS Identity and Access Management (IAM) para generar un informe de credenciales (credential report). Buscar actividad de Security Hub en el informe.",
+            "C. Usar AWS Identity and Access Management (IAM) para generar un informe de credenciales. Buscar actividad de Security Hub en el informe.",
             "D. Crear un analyzer en AWS Identity and Access Management Access Analyzer. Examinar los hallazgos sobre las acciones del rol en Security Hub."
         ],
         "respuestas_correctas": [
@@ -3989,7 +3989,7 @@
         "pregunta": "287.- Una empresa aloja su aplicación de microservicios en Amazon Elastic Kubernetes Service (Amazon EKS). La empresa ha configurado implementaciones continuas para actualizar la aplicación bajo demanda. Un ingeniero de seguridad debe implementar una solución que proporcione detección automática de anomalías en los registros de la aplicación en tiempo casi real. Además, la solución debe enviar notificaciones sobre estas anomalías al equipo de seguridad. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
             "A. Configurar Amazon CloudWatch Container Insights para recopilar y agregar los registros de la aplicación en EKS. Crear una alarma de CloudWatch para supervisar las anomalías. Configurar la alarma para que ejecute una función de AWS Lambda que alerte al equipo de seguridad cuando se detecten anomalías.",
-            "B. Configurar Amazon EKS para enviar los registros de la aplicación a Amazon CloudWatch. Crear una alarma de CloudWatch basada en un filtro de métricas del grupo de registros y especificar la detección de anomalías como tipo de umbral. Configurar la alarma para usar Amazon Simple Notification Service (Amazon SNS) y alertar al equipo de seguridad.",
+            "B. Configurar Amazon EKS para enviar los registros de la aplicación a Amazon CloudWatch. Crear una alarma de CloudWatch basada en un filtro de métricas del grupo de registros y especificar la detección de anomalías como tipo de umbral. Configurar la alarma para usar Amazon SNS y alertar al equipo de seguridad.",
             "C. Configurar Amazon EKS para exportar los registros a Amazon S3. Utilizar consultas de Amazon Athena para analizar los registros en busca de anomalías. Usar Amazon QuickSight para visualizar y supervisar las solicitudes de acceso de usuarios en busca de anomalías. Configurar notificaciones de Amazon SNS para alertar al equipo de seguridad.",
             "D. Configurar AWS App Mesh para supervisar el tráfico hacia los microservicios en Amazon EKS. Integrar App Mesh con AWS CloudTrail para el registro. Utilizar Amazon Detective para analizar los registros en busca de anomalías y alertar al equipo de seguridad cuando se detecten."
         ],
@@ -4118,7 +4118,7 @@
     {
         "pregunta": "297.- Una empresa aloja una aplicación web que captura y almacena datos sensibles en una tabla de Amazon DynamoDB. La empresa necesita implementar una solución que proporcione protección de datos de extremo a extremo y la capacidad de detectar cambios no autorizados en los datos. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Usar una clave administrada por el cliente de AWS Key Management Service (AWS KMS). Cifrar los datos en reposo.",
+            "A. Usar una clave administrada por el cliente de AWS Key Management Service (KMS). Cifrar los datos en reposo.",
             "B. Usar AWS Private Certificate Authority. Cifrar los datos en tránsito.",
             "C. Usar el Cliente de Cifrado de DynamoDB. Usar cifrado del lado del cliente. Firmar los elementos de la tabla.",
             "D. Usar el SDK de cifrado de AWS. Usar cifrado del lado del cliente. Firmar los elementos de la tabla."
@@ -4199,7 +4199,7 @@
         "pregunta": "303.- La política de seguridad de red de una empresa requiere cifrado para todos los datos en tránsito. La empresa debe cifrar los datos que se envían entre las instancias de Amazon EC2 y los volúmenes de Amazon Elastic Block Store (Amazon EBS). ¿Qué solución cumple con este requisito?",
         "opciones": [
             "A. Configurar Amazon EC2 para habilitar el cifrado en las propiedades de la interfaz de red de EC2.",
-            "B. Configurar Amazon EBS para habilitar el cifrado de volúmenes con AWS Key Management Service (AWS KMS) para datos en reposo.",
+            "B. Configurar Amazon EBS para habilitar el cifrado de volúmenes con AWS Key Management Service (KMS) para datos en reposo.",
             "C. Configurar Amazon EBS para habilitar el cifrado TLS en las propiedades de configuración del volumen.",
             "D. Configurar Amazon EC2 para habilitar el cifrado TLS con certificados almacenados en AWS Certificate Manager (ACM)."
         ],
@@ -4213,7 +4213,7 @@
         "opciones": [
             "A. Crear una regla de Amazon EventBridge que detecte hallazgos de GuardDuty con el tipo Behavior:EC2/TrafficVolumeUnusual. Configurar la regla para invocar una función de AWS Lambda que desactive las claves de acceso del perfil de instancia EC2.",
             "B. Crear una regla de Amazon EventBridge que invoque una función de AWS Lambda cuando GuardDuty detecte tráfico anómalo. Programar la función Lambda para desasociar la instancia identificada del grupo de Auto Scaling y aislarla usando un nuevo grupo de seguridad restringido.",
-            "C. Crear una respuesta automatizada en Security Hub que actualice la ACL de red (network ACL) asociada a la subred de las instancias EC2. Configurar la respuesta para denegar tráfico desde la fuente que generó el tráfico anómalo detectado.",
+            "C. Crear una respuesta automatizada en Security Hub que actualice la ACL de red asociada a la subred de las instancias EC2. Configurar la respuesta para denegar tráfico desde la fuente que generó el tráfico anómalo detectado.",
             "D. Crear un tema de Amazon SNS y suscribir el correo electrónico del ingeniero de seguridad a ese tema. Configurar GuardDuty para enviar todos los hallazgos al tema de SNS."
         ],
         "respuestas_correctas": [
