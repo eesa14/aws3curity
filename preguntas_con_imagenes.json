@@ -3351,7 +3351,7 @@
     {
         "pregunta": "240.- Una empresa está implementando una solución personalizada de notificaciones para detectar intentos repetidos no autorizados de autenticación en bastion hosts. El ingeniero de seguridad de la empresa necesita implementar una solución que envíe una notificación cuando ocurran 5 intentos fallidos en un período de 5 minutos. La solución debe usar servicios nativos de AWS y notificar solo al administrador del sistema asignado al bastion host específico. ¿Qué solución cumplirá con estos requisitos?",
         "opciones": [
-            "A. Usar el agente de Amazon CloudWatch para recolectar los registros del sistema operativo. Usar Amazon EventBridge para configurar una alarma basada en un filtro de métricas para intentos fallidos de inicio de sesión. Enviar una alerta a Amazon SNS (Simple Notification Service) cuando se supere el umbral definido. Usar etiquetas (tags) de las instancias EC2 para determinar qué temas de SNS reciben las notificaciones.",
+            "A. Usar el agente de Amazon CloudWatch para recolectar los registros del sistema operativo. Usar Amazon EventBridge para configurar una alarma basada en un filtro de métricas para intentos fallidos de inicio de sesión. Enviar una alerta a Amazon SNS cuando se supere el umbral definido. Usar etiquetas de las instancias EC2 para determinar qué temas de SNS reciben las notificaciones.",
             "B. Usar el agente de AWS Systems Manager para recolectar los registros del sistema operativo. Usar el documento AWS-ConfigureCloudWatch del comando Run Command de Systems Manager para configurar un evento de Amazon EventBridge basado en un filtro de métricas para intentos fallidos de inicio de sesión. Enviar una alerta a Amazon SNS cuando se supere el umbral definido. Usar filtros de mensajes de SNS para controlar quién recibe las notificaciones.",
             "C. Usar el agente de Amazon CloudWatch para recolectar los registros del sistema operativo. Crear una alarma de CloudWatch basada en un filtro de métricas para intentos fallidos de inicio de sesión. Enviar una alerta a Amazon SNS cuando se supere el umbral definido. Usar filtros de mensajes de SNS para controlar quién recibe las notificaciones.",
             "D. Usar el agente de AWS Systems Manager para recolectar los registros del sistema operativo. Usar el documento AWS-ConfigureCloudWatch del comando Run Command de Systems Manager para configurar una alarma de Amazon CloudWatch basada en un filtro de métricas para intentos fallidos de inicio de sesión. Enviar una alerta a Amazon SNS cuando se supere el umbral definido. Usar etiquetas de instancias EC2 para determinar qué temas de SNS reciben las notificaciones."
@@ -4261,3 +4261,4 @@
         "imagenes": []
     }
 ]
+
