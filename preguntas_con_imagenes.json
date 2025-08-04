@@ -2359,7 +2359,7 @@
     {
         "pregunta": "167.- Un ingeniero de seguridad debe implementar monitoreo sobre las instancias de base de datos Amazon Aurora MySQL de una empresa. La empresa desea recibir notificaciones por correo electrónico cuando usuarios desconocidos intenten iniciar sesión en el endpoint de la base de datos. ¿Qué solución cumplirá con estos requisitos con el menor esfuerzo operativo posible?",
         "opciones": [
-            "A. Activar Amazon GuardDuty. Habilitar la función Amazon RDS Protection en GuardDuty para detectar intentos de inicio de sesión por parte de usuarios desconocidos. Crear una regla de Amazon EventBridge para filtrar los hallazgos de GuardDuty. Enviar notificaciones por correo electrónico usando Amazon SNS (Simple Notification Service).",
+            "A. Activar Amazon GuardDuty. Habilitar la función Amazon RDS Protection en GuardDuty para detectar intentos de inicio de sesión por parte de usuarios desconocidos. Crear una regla de Amazon EventBridge para filtrar los hallazgos de GuardDuty. Enviar notificaciones por correo electrónico usando Amazon SNS.",
             "B. Activar el parámetro server_audit_logging en las instancias Aurora MySQL. Usar una función AWS Lambda para escanear periódicamente los archivos de registro en busca de intentos de inicio de sesión por parte de usuarios desconocidos. Enviar notificaciones por correo electrónico mediante Amazon SNS.",
             "C. Crear una AMI personalizada de Amazon RDS. Incluir un agente de seguridad de terceros en la AMI para detectar intentos de inicio de sesión por parte de usuarios desconocidos. Implementar instancias RDS Custom. Migrar los datos desde la instalación actual a las nuevas instancias. Configurar las notificaciones por correo electrónico desde el agente de terceros.",
             "D. Escribir un procedimiento almacenado que detecte intentos de inicio de sesión de usuarios desconocidos. Programar un trabajo recurrente dentro del motor de base de datos. Configurar Aurora MySQL para usar Amazon SNS y enviar las notificaciones por correo electrónico."
@@ -4261,5 +4261,6 @@
         "imagenes": []
     }
 ]
+
 
 
