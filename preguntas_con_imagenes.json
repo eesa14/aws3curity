@@ -900,7 +900,7 @@
     {
         "pregunta": "64.- Una empresa está desarrollando una aplicación en AWS que almacenará información sensible. La empresa cuenta con un equipo de soporte que tiene acceso a la infraestructura de TI, incluidas las bases de datos. El ingeniero de seguridad de la empresa debe implementar medidas para proteger los datos sensibles contra cualquier posible brecha de seguridad, minimizando al mismo tiempo la carga de gestión. Las credenciales deben rotarse de forma regular. ¿Qué debería recomendar el ingeniero de seguridad?",
         "opciones": [
-            "A. Habilitar el cifrado de Amazon RDS para cifrar la base de datos y las instantáneas (snapshots). Habilitar el cifrado de Amazon Elastic Block Store (Amazon EBS) en las instancias de Amazon EC2. Incluir las credenciales de la base de datos en el campo de user data de EC2. Usar una función de AWS Lambda para rotar las credenciales de la base de datos. Configurar TLS para la conexión con la base de datos.",
+            "A. Habilitar el cifrado de Amazon RDS para cifrar la base de datos y las instantáneas. Habilitar el cifrado de Amazon EBS en las instancias de Amazon EC2. Incluir las credenciales de la base de datos en el campo de user data de EC2. Usar una función de AWS Lambda para rotar las credenciales de la base de datos. Configurar TLS para la conexión con la base de datos.",
             "B. Instalar una base de datos en una instancia de Amazon EC2. Habilitar un cifrado de disco de terceros para cifrar el volumen de Amazon EBS. Almacenar las credenciales de la base de datos en AWS CloudHSM con rotación automática. Configurar TLS para la conexión con la base de datos.",
             "C. Habilitar el cifrado de Amazon RDS para cifrar la base de datos y las instantáneas. Habilitar el cifrado de Amazon EBS en las instancias EC2. Almacenar las credenciales de la base de datos en AWS Secrets Manager con rotación automática. Configurar TLS para la conexión con la base de datos alojada en RDS.",
             "D. Configurar un clúster de AWS CloudHSM junto con AWS Key Management Service (AWS KMS) para almacenar claves KMS. Configurar el cifrado de Amazon RDS utilizando AWS KMS para cifrar la base de datos. Almacenar las credenciales de la base de datos en AWS Systems Manager Parameter Store con rotación automática. Configurar TLS para la conexión con la base de datos alojada en RDS."
@@ -4261,4 +4261,5 @@
         "imagenes": []
     }
 ]
+
 
